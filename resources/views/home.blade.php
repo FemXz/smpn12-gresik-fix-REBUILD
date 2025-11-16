@@ -694,7 +694,7 @@ document.addEventListener("DOMContentLoaded", () => {
   display: flex;
   flex-direction: column;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  padding: 8px;
+  padding: 20px;
 }
 
 /* Hover effect */
@@ -816,7 +816,7 @@ document.addEventListener("DOMContentLoaded", () => {
   .stack-card {
     aspect-ratio: 3 / 4.5; /* sedikit lebih tinggi di mobile */
     border-radius: 16px;
-    padding: 6px;
+    padding: 15px;
   }
 
   .stack-image {
