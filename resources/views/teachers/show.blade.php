@@ -610,11 +610,11 @@
                                     <!-- Mengganti col-6 dengan struktur grid murni CSS -->
                                     <div class="info-item">
                                         <div class="info-item-icon education-icon"><i class="fas fa-graduation-cap"></i></div>
-                                        <div class="info-item-content"><strong>Pendidikan:</strong><br><span>{{ $teacher->education ?? 'S1 Pendidikan' }}</span></div>
+                                        <div class="info-item-content"><strong>Pendidikan:</strong><br><span>{{ $teacher->education ?? 'Kosong' }}</span></div>
                                     </div>
                                     <div class="info-item">
                                         <div class="info-item-icon experience-icon"><i class="fas fa-calendar-alt"></i></div>
-                                        <div class="info-item-content"><strong>Pengalaman:</strong><br><span>{{ $teacher->experience ?? '10+ Tahun' }}</span></div>
+                                        <div class="info-item-content"><strong>Pengalaman:</strong><br><span>{{ $teacher->experience ?? 'Kosong' }}</span></div>
                                     </div>
                                     <div class="info-item">
                                         <div class="info-item-icon subject-icon"><i class="fas fa-book"></i></div>
