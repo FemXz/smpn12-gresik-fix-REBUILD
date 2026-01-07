@@ -6,1113 +6,636 @@
 <!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* ========== Design Matching SMP Negeri 12 Gresik ========== */
-* {
-    font-family: 'Inter', sans-serif;
-}
-
+/* ========== MODERN GREEN DESIGN SYSTEM ========== */
 :root {
-    --primary-green: #2c9653ff;
+    --primary-green: #2c9653;
     --dark-green: #16a34a;
-    --light-green: #dcfce7;
+    --soft-green: #f0fdf4;
     --accent-green: #15803d;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
+    --text-main: #1a2e21;
+    --text-muted: #64748b;
     --white: #ffffff;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
+    --shadow-soft: 0 10px 25px -5px rgba(44, 150, 83, 0.1), 0 8px 10px -6px rgba(44, 150, 83, 0.1);
 }
 
-body {
-    background: var(--gray-50);
-    color: var(--text-dark);
-    line-height: 1.6;
+.ekskul-wrapper {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8fafc; /* Background konten saja */
+    color: var(--text-main);
+    overflow-x: hidden;
 }
 
-/* ========== Hero Section ========== */
-.hero-section {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
-    color: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.06)"/></svg>');
-    animation: float 20s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
-.container {
+.container-ekskul {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
-.hero-content {
+/* ========== HERO SECTION ========== */
+.hero-ekskul {
+    background: linear-gradient(135deg, #166534 0%, #2c9653 100%);
+    padding: 120px 0 160px;
     text-align: center;
+    color: white;
+    position: relative;
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.hero-ekskul h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-ekskul p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+/* ========== STATS OVERLAY ========== */
+.stats-overlay {
+    margin-top: -80px;
     position: relative;
     z-index: 10;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    opacity: 0.95;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    font-weight: 400;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.hero-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 15px 30px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    backdrop-filter: blur(10px);
-}
-
-.hero-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-/* ========== Main Content ========== */
-.main-content {
-    padding: 60px 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-}
-
-.section-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 50px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ========== Stats Section ========== */
-.stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.stat-item {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    border: 1px solid rgba(44, 150, 83, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item i {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.stat-val {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    display: block;
+}
+
+.stat-lbl {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ========== SEARCH & FILTER ========== */
+.filter-section-ekskul {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
     margin-bottom: 60px;
 }
 
-.stat-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border: 1px solid var(--gray-200);
-    transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(34, 197, 94, 0.15);
-}
-
-.stat-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: white;
-    font-size: 24px;
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--primary-green);
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    font-size: 1rem;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-/* ========== Search Section ========== */
-.search-section {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    margin-bottom: 50px;
-    border: 1px solid var(--gray-200);
-}
-
-.search-box {
-    max-width: 500px;
-    margin: 0 auto 30px;
+.search-bar-ekskul {
     position: relative;
+    margin-bottom: 24px;
 }
 
-.search-input {
+.search-bar-ekskul input {
     width: 100%;
-    padding: 15px 20px 15px 50px;
-    border: 2px solid var(--gray-200);
-    border-radius: 50px;
-    font-size: 16px;
-    outline: none;
+    padding: 18px 24px 18px 56px;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 1rem;
     transition: all 0.3s ease;
-    background: var(--gray-50);
+    outline: none;
 }
 
-.search-input:focus {
+.search-bar-ekskul input:focus {
     border-color: var(--primary-green);
-    background: white;
-    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+    box-shadow: 0 0 0 4px rgba(44, 150, 83, 0.1);
 }
 
-.search-icon {
+.search-bar-ekskul i {
     position: absolute;
-    left: 18px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--text-light);
-    font-size: 18px;
+    color: var(--text-muted);
+    font-size: 1.2rem;
 }
 
-.filter-buttons {
+.filter-pills {
     display: flex;
     flex-wrap: wrap;
+    gap: 12px;
     justify-content: center;
-    gap: 15px;
 }
 
-.filter-btn {
-    padding: 12px 24px;
-    border: 2px solid var(--gray-200);
-    background: var(--gray-50);
-    color: var(--text-light);
-    border-radius: 50px;
+.pill {
+    padding: 10px 24px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    color: var(--text-muted);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    border: none;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
+.pill.active, .pill:hover {
     background: var(--primary-green);
     color: white;
-    border-color: var(--primary-green);
-    transform: translateY(-2px);
 }
 
-/* ========== Cards Grid ========== */
-.cards-grid {
+/* ========== CARDS GRID ========== */
+.ekskul-grid {
     display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-  align-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
 }
 
-.card {
+.ekskul-card {
     background: white;
-    padding: 20px;
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border: 1px solid var(--gray-200);
-    transition: all 0.3s ease;
-    /* Set a minimum height for consistent card size */
-    min-height: 450px; /* Adjust as needed based on content */
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #f1f5f9;
     display: flex;
     flex-direction: column;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(34, 197, 94, 0.15);
+.ekskul-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -10px rgba(44, 150, 83, 0.15);
 }
 
-.card-image {
-    height: 200px;
-    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+.card-img-box {
+    height: 220px;
     position: relative;
+    background: var(--soft-green);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 48px;
-    border-radius: 20px;
-    overflow: hidden;               /* penting biar img clip */
 }
 
-.card-image img {
+.card-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-top-left-radius: 20px;   /* biar ikut pas */
-    border-top-right-radius: 20px;
 }
 
+.card-img-box i {
+    font-size: 4rem;
+    color: var(--primary-green);
+    opacity: 0.5;
+}
 
-.card-badge {
+.category-tag {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 12px;
+    top: 16px;
+    left: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 16px;
+    border-radius: 10px;
+    font-size: 0.75rem;
     font-weight: 700;
     color: var(--primary-green);
-    backdrop-filter: blur(10px);
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
 }
 
-.card-content {
-    padding: 25px;
-    flex-grow: 1; /* Allow content to grow and push button to bottom */
+.card-body-ekskul {
+    padding: 28px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-.card-title {
+.card-body-ekskul h3 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--text-main);
 }
 
-.card-info {
+.pembina-info {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-    font-size: 14px;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 10px;
+    background: var(--soft-green);
+    border-radius: 12px;
 }
 
-.card-info-icon {
-    width: 35px;
-    height: 35px;
-    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
-    color: white;
-    font-size: 14px;
+.pembina-info i {
+    color: var(--primary-green);
 }
 
-.card-description {
-    color: var(--text-light);
+.pembina-info span {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.ekskul-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
     line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 14px;
-    flex-grow: 1; /* Allow description to take available space */
+    margin-bottom: 24px;
 }
 
-.btn-detail {
+.btn-ekskul-detail {
+    margin-top: auto;
+    width: 100%;
+    padding: 14px;
     background: var(--primary-green);
     color: white;
-    padding: 12px 24px;
     border: none;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: 14px;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: 100%;
-    margin-top: auto; /* Push button to the bottom */
 }
 
-.btn-detail:hover {
+.btn-ekskul-detail:hover {
     background: var(--dark-green);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
 }
 
-/* ========== Info Section ========== */
-/* ========================================
-   EXTRACURRICULAR HERO SECTION - REFINED
-   ======================================== */
-
-.extracurricular-hero {
-    /* REFINEMENT: Menggunakan gradient yang sudah ada dan menambah padding */
-    background: var(--gradient-hero); /* atau var(--gradient-primary) */
-    color: white;
-    padding: var(--space-12) 0; /* Padding vertikal yang cukup */
-    min-height: 60vh; /* Memberi tinggi minimal agar tidak terlalu pendek */
-    display: flex;
-    align-items: center;
-    text-align: center; /* Default ke tengah untuk mobile */
+/* ========== JOIN SECTION ========== */
+.join-section-ekskul {
+    background: white;
+    border-radius: 32px;
+    padding: 60px 40px;
+    text-align: center;
+    margin-bottom: 100px;
+    box-shadow: var(--shadow-soft);
+    border: 2px dashed var(--soft-green);
 }
 
-/* Kontainer di dalamnya (jika ada) */
-.extracurricular-hero .container {
-    max-width: 900px; /* Batasi lebar agar teks tidak terlalu panjang */
-}
-
-.extracurricular-hero h1 {
-    /* REFINEMENT: Menggunakan font responsif */
-    font-size: clamp(2.5rem, 7vw, 4rem);
+.join-section-ekskul h2 {
+    font-size: 2.2rem;
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: var(--space-4);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px;
 }
 
-.extracurricular-hero h1 span {
-    /* REFINEMENT: Membuat sub-judul menjadi bagian dari H1 tapi lebih kecil */
-    display: block;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-weight: 700;
-    opacity: 0.9;
+.join-section-ekskul p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 32px;
 }
 
-.extracurricular-hero p {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 60ch; /* Batasi panjang baris untuk keterbacaan */
-    margin: 0 auto var(--space-8); /* Pusatkan paragraf */
-    line-height: 1.7;
-}
-
-.extracurricular-hero .hero-buttons {
-    display: flex;
-    flex-direction: column; /* Susun tombol ke bawah di mobile */
-    align-items: center;
-    gap: var(--space-4);
-}
-
-/* Menggunakan kembali style tombol yang sudah ada */
-.extracurricular-hero .btn {
-    padding: var(--space-3) var(--space-6);
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    text-decoration: none;
-    transition: var(--transition-bounce);
+.contact-card-ekskul {
+    background: var(--soft-green);
+    padding: 24px;
+    border-radius: 20px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: var(--space-3);
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    width: 90%;
-    max-width: 350px; /* Batasi lebar tombol */
+    gap: 16px;
+    color: var(--primary-green);
+    font-weight: 700;
 }
 
-.extracurricular-hero .btn-primary {
-    background: var(--gradient-secondary);
-    color: white;
-    box-shadow: var(--shadow-lg);
-}
-
-.extracurricular-hero .btn-primary:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: var(--shadow-xl);
-}
-
-.extracurricular-hero .btn-outline {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-}
-
-.extracurricular-hero .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-3px) scale(1.05);
-}
-
-/* ========================================
-   MEDIA QUERY UNTUK LAYAR LEBIH BESAR
-   ======================================== */
-
-@media (max-width: 414px) {
-    body{
-        padding-top: 40px !important;
-    }
-    .extracurricular-hero .hero-buttons {
-        flex-direction: row; /* Buat tombol berdampingan */
-        justify-content: center;
-    }
-
-    .extracurricular-hero .btn {
-        width: auto; /* Biarkan lebar tombol ditentukan oleh kontennya */
-    }
-}
-
-@media (min-width: 768px) {
-    .extracurricular-hero {
-        text-align: left; /* Ratakan kiri untuk desktop */
-        min-height: 50vh;
-    }
-
-    .extracurricular-hero p {
-        margin-left: 0; /* Hapus margin auto */
-    }
-
-    .extracurricular-hero .hero-buttons {
-        justify-content: flex-start; /* Ratakan kiri tombol */
-    }
-}
-
-
-/* ========== MODAL OVERLAY - FIXED ========== */
-#detailModal {
+/* ========== MODAL FIX ========== */
+#modalEkskul {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
     z-index: 9999;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    animation: modalFadeIn 0.3s ease-out;
+    backdrop-filter: blur(8px);
 }
 
-.modal-container {
+.modal-content-ekskul {
     background: white;
-    border-radius: 25px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    max-width: 600px;
     width: 100%;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
+    max-width: 600px;
+    border-radius: 28px;
+    overflow: hidden;
     position: relative;
-    animation: modalSlideIn 0.3s ease-out;
+    animation: modalSlide 0.4s ease-out;
 }
 
-.modal-header {
-    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+@keyframes modalSlide {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header-ekskul {
+    background: var(--primary-green);
+    padding: 40px 30px;
     color: white;
-    padding: 30px;
     position: relative;
 }
 
-.modal-close {
+.close-modal-ekskul {
     position: absolute;
     top: 20px;
-    right: 25px;
-    background: rgba(255, 255, 255, 0.2);
+    right: 20px;
+    background: rgba(255,255,255,0.2);
     border: none;
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
 }
 
-.modal-close:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
-}
-
-.modal-title {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin: 0;
-    padding-right: 60px;
-}
-
-.modal-category {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-top: 10px;
-    backdrop-filter: blur(10px);
-}
-
-.modal-body {
+.modal-body-ekskul {
     padding: 30px;
-    flex: 1;
-    overflow-y: auto;
 }
 
-.modal-description {
-    color: var(--text-dark);
-    line-height: 1.7;
-    font-size: 15px;
-    margin-bottom: 25px;
-    text-align: justify;
+.modal-info-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
 }
 
-.modal-info-grid {
-    display: grid;
-    gap: 15px;
-    margin-bottom: 25px;
-}
+.modal-info-row:last-child { border: none; }
 
-.modal-info-item {
-    background: var(--light-green);
-    padding: 20px;
-    border-radius: 15px;
-    border-left: 4px solid var(--primary-green);
-    transition: all 0.3s ease;
-}
-
-.modal-info-item:hover {
-    background: #bbf7d0;
-    transform: translateX(5px);
+.modal-info-row i {
+    font-size: 1.2rem;
+    color: var(--primary-green);
+    margin-top: 4px;
 }
 
 .modal-info-label {
-    display: flex;
-    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
     font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 8px;
-    font-size: 14px;
+    margin-bottom: 4px;
 }
 
-.modal-info-label i {
-    margin-right: 10px;
-    color: var(--primary-green);
-    width: 16px;
+.modal-info-val {
+    font-weight: 600;
+    color: var(--text-main);
 }
 
-.modal-info-value {
-    color: var(--text-light);
-    font-size: 14px;
-    margin-left: 26px;
-    font-weight: 500;
-}
-
-.modal-footer {
-    padding: 25px 30px;
-    background: var(--gray-50);
-    border-top: 1px solid var(--gray-200);
-}
-
-.modal-contact-btn {
-    background: linear-gradient(135deg, #059669, #047857);
+.btn-wa-ekskul {
+    width: 100%;
+    padding: 16px;
+    background: #25d366;
     color: white;
-    padding: 15px 25px;
     border: none;
-    border-radius: 50px;
+    border-radius: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 100%;
-}
-
-.modal-contact-btn:hover {
-    background: linear-gradient(135deg, #047857, #065f46);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
-}
-
-.modal-contact-btn:disabled {
-    background: var(--gray-200);
-    color: var(--text-light);
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
-/* ========== Empty State ========== */
-.empty-state {
-    text-align: center;
-    padding: 60px 40px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border: 1px solid var(--gray-200);
-}
-
-.empty-icon {
-    font-size: 60px;
-    margin-bottom: 20px;
-    color: var(--primary-green);
-    opacity: 0.7;
-}
-
-/* ========== Animations ========== */
-@keyframes modalFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes modalSlideIn {
-    from { 
-        opacity: 0; 
-        transform: scale(0.9) translateY(20px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: scale(1) translateY(0); 
-    }
-}
-
-/* ========== Responsive Design ========== */
-@media (max-width: 768px) {
-    .hero-title { font-size: 2.5rem; }
-    .hero-section { padding: 60px 0; }
-    .hero-buttons { flex-direction: column; align-items: center; }
-    .hero-btn { width: 250px; justify-content: center; }
-    .cards-grid { grid-template-columns: 1fr; gap: 20px; }
-    .filter-buttons { flex-direction: column; align-items: center; }
-    .filter-btn { width: 250px; justify-content: center; }
-    .search-section { padding: 25px; margin: 0 10px 40px; }
-    .info-section { padding: 40px 0; margin: 40px 10px 0; }
-    .container { padding: 0 15px; }
-    
-    .modal-container { 
-        margin: 10px; 
-        max-height: 95vh; 
-    }
-    .modal-header { padding: 25px; }
-    .modal-title { font-size: 1.5rem; }
-    .modal-body { padding: 20px; }
-    .modal-footer { padding: 20px; }
-}
-
-@media (max-width: 480px) {
-    .hero-title { font-size: 2rem; }
-    .search-input { font-size: 16px; }
-    .cards-grid { gap: 15px; }
-    .card-content { padding: 20px; }
-    
-    .modal-container { 
-        margin: 5px; 
-        border-radius: 20px; 
-    }
-    .modal-header { padding: 20px; }
-    .modal-title { font-size: 1.3rem; }
-    .modal-body { padding: 15px; }
-    .modal-info-item { padding: 15px; }
+    margin-top: 10px;
 }
 
 .hidden { display: none !important; }
+
+@media (max-width: 768px) {
+    .ekskul-grid { grid-template-columns: 1fr; }
+    .hero-ekskul { padding: 80px 0 120px; }
+}
 </style>
 
-<!-- Hero Section -->
-<div class="hero-section">
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="hero-title">Ekstrakurikuler SMP Negeri 12 Gresik</h1>
-            <p class="hero-subtitle">
-                Bergabunglah dengan berbagai kegiatan ekstrakurikuler yang menginspirasi! Kembangkan bakat, minat, dan karakter melalui program-program unggulan kami.
-            </p>
-            <div class="hero-buttons">
-                <a href="#ekstrakurikuler" class="hero-btn">
-                    <i class="fas fa-info-circle"></i>
-                    Tentang Ekstrakurikuler
-                </a>
-                <a href="#kontak" class="hero-btn">
-                    <i class="fas fa-users"></i>
-                    Hubungi Admin
-                </a>
-            </div>
+<div class="ekskul-wrapper">
+    <!-- Hero -->
+    <div class="hero-ekskul">
+        <div class="container-ekskul">
+            <h1>Ekstrakurikuler</h1>
+            <p>Wadah kreativitas dan pengembangan diri siswa SMP Negeri 12 Gresik. Temukan minatmu dan raih prestasimu bersama kami!</p>
         </div>
     </div>
-</div>
 
-<!-- Main Content -->
-<div class="main-content">
-    <div class="container">
-        
-        <!-- Section Title -->
-        <h2 class="section-title">Ekstrakurikuler Unggulan</h2>
-        <p class="section-subtitle">
-            Temukan dan bergabunglah dengan berbagai kegiatan ekstrakurikuler yang sesuai dengan minat dan bakat Anda
-        </p>
-
+    <div class="container-ekskul">
         <!-- Stats -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <div class="stat-number">{{ count($extracurriculars) }}+</div>
-                <div class="stat-label">Ekstrakurikuler Aktif</div>
+        <div class="stats-overlay">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <span class="stat-val">{{ count($extracurriculars) }}+</span>
+                <span class="stat-lbl">Ekskul Aktif</span>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Siswa Berpartisipasi</div>
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <span class="stat-val">50+</span>
+                <span class="stat-lbl">Prestasi Tahunan</span>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Prestasi Diraih</div>
+            <div class="stat-item">
+                <i class="fas fa-user-graduate"></i>
+                <span class="stat-val">100%</span>
+                <span class="stat-lbl">Partisipasi Siswa</span>
             </div>
         </div>
 
-        <!-- Search + Filter -->
-        <div class="search-section">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Cari ekstrakurikuler..." class="search-input">
-                <div class="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
+        <!-- Filter -->
+        <div class="filter-section-ekskul">
+            <div class="search-bar-ekskul">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchEkskul" placeholder="Cari nama ekstrakurikuler...">
             </div>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th-large"></i>
-                    <span>Semua</span>
-                </button>
-                <button class="filter-btn" data-filter="olahraga">
-                    <i class="fas fa-running"></i>
-                    <span>Olahraga</span>
-                </button>
-                <button class="filter-btn" data-filter="seni">
-                    <i class="fas fa-palette"></i>
-                    <span>Seni & Budaya</span>
-                </button>
-                <button class="filter-btn" data-filter="akademik">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Akademik</span>
-                </button>
+            <div class="filter-pills">
+                <button class="pill active" data-filter="all">Semua</button>
+                <button class="pill" data-filter="olahraga">Olahraga</button>
+                <button class="pill" data-filter="seni">Seni & Budaya</button>
+                <button class="pill" data-filter="akademik">Akademik</button>
             </div>
         </div>
 
-        <!-- Cards -->
-        <div id="extracurricular-grid" class="cards-grid">
+        <!-- Grid -->
+        <div class="ekskul-grid" id="ekskulGrid">
             @forelse ($extracurriculars as $item)
-                <div class="card extracurricular-card" 
-                     data-category="{{ strtolower($item->category ?? 'akademik') }}" 
+                <div class="ekskul-card" 
+                     data-cat="{{ strtolower($item->category ?? 'akademik') }}" 
                      data-name="{{ strtolower($item->name) }}">
                     
-                    <div class="card-image">
+                    <div class="card-img-box">
                         @if($item->image)
                             <img src="{{ asset($item->image) }}" alt="{{ $item->name }}">
                         @else
-                            @if(strtolower($item->category ?? 'akademik') == 'olahraga')
-                                <i class="fas fa-futbol"></i>
-                            @elseif(strtolower($item->category ?? 'akademik') == 'seni')
-                                <i class="fas fa-paint-brush"></i>
-                            @else
-                                <i class="fas fa-book-open"></i>
-                            @endif
+                            <i class="fas fa-users"></i>
                         @endif
-                        <div class="card-badge">
-                            {{ ucfirst($item->category ?? 'Akademik') }}
-                        </div>
+                        <div class="category-tag">{{ $item->category ?? 'Umum' }}</div>
                     </div>
                     
-                    <div class="card-content">
-                        <h3 class="card-title">{{ $item->name }}</h3>
+                    <div class="card-body-ekskul">
+                        <h3>{{ $item->name }}</h3>
                         
-                        <div class="card-info">
-                            <div class="card-info-icon">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                            </div>
-                            <div>
-                                <div style="font-weight: 700; color: var(--text-dark);">Pembina</div>
-                                <div style="color: var(--text-light);">{{ $item->teacher_in_charge ?? 'Akan segera ditentukan' }}</div>
-                            </div>
+                        <div class="pembina-info">
+                            <i class="fas fa-user-tie"></i>
+                            <span>{{ $item->teacher_in_charge ?? 'Pembina belum ditentukan' }}</span>
                         </div>
                         
-                        <p class="card-description">
-                            {{ \Illuminate\Support\Str::limit(strip_tags($item->description), 120) }}
+                        <p class="ekskul-desc">
+                            {{ \Illuminate\Support\Str::limit(strip_tags($item->description), 100) }}
                         </p>
                         
-                        <button class="btn-detail detail-btn"
+                        <button class="btn-ekskul-detail open-modal"
                             data-name="{{ $item->name }}"
-                            data-category="{{ ucfirst($item->category ?? 'Akademik') }}"
-                            data-description="{{ strip_tags($item->description) }}"
-                            data-teacher="{{ $item->teacher_in_charge ?? 'Akan segera ditentukan' }}"
+                            data-cat="{{ $item->category ?? 'Umum' }}"
+                            data-desc="{{ strip_tags($item->description) }}"
+                            data-teacher="{{ $item->teacher_in_charge ?? '-' }}"
                             data-phone="{{ $item->teacher_phone ?? '' }}"
-                            data-schedule="{{ $item->schedule ?? '' }}">
-                            <i class="fas fa-info-circle"></i>
-                            <span>Detail Ekstrakurikuler</span>
+                            data-schedule="{{ $item->schedule ?? 'Akan diinfokan' }}">
+                            <i class="fas fa-plus-circle"></i>
+                            Lihat Detail
                         </button>
                     </div>
                 </div>
             @empty
-                <div class="empty-state" style="grid-column: 1 / -1;">
-                    <div class="empty-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--text-dark); margin-bottom: 15px;">
-                        Ekstrakurikuler Sedang Dipersiapkan
-                    </h3>
-                    <p style="color: var(--text-light); font-size: 1.1rem;">Tim admin sedang menyiapkan berbagai kegiatan menarik untuk kalian. Nantikan update selanjutnya!</p>
+                <div style="grid-column: 1/-1; text-align: center; padding: 60px;">
+                    <i class="fas fa-folder-open" style="font-size: 3rem; color: #cbd5e1; margin-bottom: 20px; display: block;"></i>
+                    <p style="color: #64748b;">Belum ada data ekstrakurikuler.</p>
                 </div>
             @endforelse
         </div>
-        
-        <!-- Info Section -->
-        <div class="info-section" id="kontak">
-            <div class="container">
-                <h2 class="info-title">Siap Bergabung?</h2>
-                <p class="info-subtitle">
-                    Semua ekstrakurikuler dikelola langsung oleh tim admin sekolah. Untuk informasi lebih lanjut atau pendaftaran, silakan hubungi pembina atau admin sekolah.
-                </p>
-                <div class="contact-info">
-                    <h3><i class="fas fa-phone-alt"></i> Informasi & Pendaftaran</h3>
-                    <p>Hubungi admin sekolah atau pembina ekstrakurikuler yang diminati untuk informasi lengkap dan proses pendaftaran.</p>
-                    <p style="margin-top: 12px; font-size: 0.9rem; opacity: 0.8;">
-                        *Pendaftaran dan pengelolaan ekstrakurikuler dilakukan langsung oleh admin sekolah
-                    </p>
-                </div>
+
+        <!-- Join -->
+        <div class="join-section-ekskul" id="kontak">
+            <h2>Siap Bergabung?</h2>
+            <p>Silakan hubungi pembina masing-masing ekstrakurikuler atau datang langsung ke ruang kesiswaan untuk pendaftaran.</p>
+            <div class="contact-card-ekskul">
+                <i class="fas fa-info-circle"></i>
+                <span>Informasi lebih lanjut hubungi Admin Sekolah</span>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Modal Detail - FULL SCREEN OVERLAY -->
-<div id="detailModal" class="hidden">
-    <div class="modal-container">
-        <!-- Modal Header -->
-        <div class="modal-header">
-            <button id="closeModal" class="modal-close">
-                <i class="fas fa-times"></i>
-            </button>
-            <h2 id="modalTitle" class="modal-title"></h2>
-            <span id="modalCategory" class="modal-category"></span>
+<!-- Modal -->
+<div id="modalEkskul">
+    <div class="modal-content-ekskul">
+        <div class="modal-header-ekskul">
+            <button class="close-modal-ekskul"><i class="fas fa-times"></i></button>
+            <h2 id="m-name" style="font-size: 1.8rem; font-weight: 800;"></h2>
+            <p id="m-cat" style="opacity: 0.9; font-weight: 600;"></p>
         </div>
-        
-        <!-- Modal Body -->
-        <div class="modal-body">
-            <p id="modalDescription" class="modal-description"></p>
+        <div class="modal-body-ekskul">
+            <p id="m-desc" style="color: #64748b; line-height: 1.7; margin-bottom: 30px;"></p>
             
-            <div class="modal-info-grid">
-                <div class="modal-info-item">
-                    <div class="modal-info-label">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        Pembina Ekstrakurikuler
-                    </div>
-                    <div id="modalTeacher" class="modal-info-value"></div>
-                </div>
-                
-                <div id="modalScheduleItem" class="modal-info-item hidden">
-                    <div class="modal-info-label">
-                        <i class="fas fa-calendar-alt"></i>
-                        Jadwal Kegiatan
-                    </div>
-                    <div id="modalSchedule" class="modal-info-value"></div>
-                </div>
-                
-                <div id="modalPhoneItem" class="modal-info-item hidden">
-                    <div class="modal-info-label">
-                        <i class="fas fa-phone"></i>
-                        Kontak Pembina
-                    </div>
-                    <div id="modalPhone" class="modal-info-value"></div>
+            <div class="modal-info-row">
+                <i class="fas fa-user-tie"></i>
+                <div>
+                    <div class="modal-info-label">Pembina</div>
+                    <div id="m-teacher" class="modal-info-val"></div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Modal Footer -->
-        <div class="modal-footer">
-            <button id="modalContactBtn" class="modal-contact-btn">
+            
+            <div class="modal-info-row">
+                <i class="fas fa-calendar-alt"></i>
+                <div>
+                    <div class="modal-info-label">Jadwal</div>
+                    <div id="m-schedule" class="modal-info-val"></div>
+                </div>
+            </div>
+
+            <button id="btnWA" class="btn-wa-ekskul">
                 <i class="fab fa-whatsapp"></i>
-                <span>Hubungi Pembina</span>
+                Hubungi Pembina
             </button>
         </div>
     </div>
 </div>
 
-<!-- JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Filter functionality
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.extracurricular-card');
-    
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.getAttribute('data-filter');
-            
-            cards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                card.style.display = (filter === 'all' || category === filter) ? 'block' : 'none';
-            });
-        });
-    });
-
-    // Search functionality
-    document.getElementById('searchInput').addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        cards.forEach(card => {
-            const name = card.getAttribute('data-name');
-            card.style.display = name.includes(searchTerm) ? 'block' : 'none';
-        });
-    });
-
-    // Modal elements
-    const detailModal = document.getElementById('detailModal');
-    const closeModal = document.getElementById('closeModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalCategory = document.getElementById('modalCategory');
-    const modalDescription = document.getElementById('modalDescription');
-    const modalTeacher = document.getElementById('modalTeacher');
-    const modalPhone = document.getElementById('modalPhone');
-    const modalSchedule = document.getElementById('modalSchedule');
-    const modalScheduleItem = document.getElementById('modalScheduleItem');
-    const modalPhoneItem = document.getElementById('modalPhoneItem');
-    const modalContactBtn = document.getElementById('modalContactBtn');
-
+    const searchInput = document.getElementById('searchEkskul');
+    const pills = document.querySelectorAll('.pill');
+    const cards = document.querySelectorAll('.ekskul-card');
+    const modal = document.getElementById('modalEkskul');
     let currentPhone = '';
-    let currentTeacher = '';
 
-    // Detail button click
-    document.querySelectorAll('.detail-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            modalTitle.textContent = this.dataset.name;
-            modalCategory.textContent = this.dataset.category;
-            modalDescription.textContent = this.dataset.description;
-            modalTeacher.textContent = this.dataset.teacher;
+    // Filter & Search
+    function filterEkskul() {
+        const term = searchInput.value.toLowerCase();
+        const activeCat = document.querySelector('.pill.active').dataset.filter;
+
+        cards.forEach(card => {
+            const name = card.dataset.name;
+            const cat = card.dataset.cat;
+            const matchSearch = name.includes(term);
+            const matchCat = activeCat === 'all' || cat === activeCat;
             
-            // Store current contact info
-            currentPhone = this.dataset.phone;
-            currentTeacher = this.dataset.teacher;
-
-            // Handle schedule
-            if (this.dataset.schedule && this.dataset.schedule.trim() !== '') {
-                modalSchedule.textContent = this.dataset.schedule;
-                modalScheduleItem.classList.remove('hidden');
-            } else {
-                modalScheduleItem.classList.add('hidden');
-            }
-
-            // Handle phone
-            if (this.dataset.phone && this.dataset.phone.trim() !== '') {
-                modalPhone.textContent = this.dataset.phone;
-                modalPhoneItem.classList.remove('hidden');
-                modalContactBtn.disabled = false;
-                modalContactBtn.innerHTML = '<i class="fab fa-whatsapp"></i><span>Hubungi Pembina</span>';
-            } else {
-                modalPhoneItem.classList.add('hidden');
-                modalContactBtn.disabled = false;
-                modalContactBtn.innerHTML = '<i class="fas fa-info-circle"></i><span>Hubungi Admin</span>';
-            }
-
-            // Show modal as full screen overlay
-            detailModal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent background scroll
+            card.style.display = (matchSearch && matchCat) ? 'flex' : 'none';
         });
-    });
-
-    // Contact button in modal
-    modalContactBtn.addEventListener('click', function() {
-        if (currentPhone && currentPhone.trim() !== '') {
-            window.open(`https://wa.me/${currentPhone}`, '_blank');
-        } else {
-            alert(`Halo! Untuk bergabung dengan ekstrakurikuler ini, silakan hubungi ${currentTeacher} atau admin sekolah. Terima kasih! 😊`);
-        }
-    });
-
-    // Modal close functionality
-    function closeModalFunction() {
-        detailModal.classList.add('hidden');
-        document.body.style.overflow = 'auto'; // Restore background scroll
     }
 
-    closeModal.addEventListener('click', closeModalFunction);
-    
-    // Close modal when clicking outside
-    detailModal.addEventListener('click', (e) => { 
-        if (e.target === detailModal) {
-            closeModalFunction();
-        }
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !detailModal.classList.contains('hidden')) {
-            closeModalFunction();
-        }
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+    searchInput.addEventListener('input', filterEkskul);
+    pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            pills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            filterEkskul();
         });
+    });
+
+    // Modal
+    document.querySelectorAll('.open-modal').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.getElementById('m-name').textContent = this.dataset.name;
+            document.getElementById('m-cat').textContent = this.dataset.cat;
+            document.getElementById('m-desc').textContent = this.dataset.desc;
+            document.getElementById('m-teacher').textContent = this.dataset.teacher;
+            document.getElementById('m-schedule').textContent = this.dataset.schedule;
+            currentPhone = this.dataset.phone;
+
+            const btnWA = document.getElementById('btnWA');
+            if (currentPhone) {
+                btnWA.classList.remove('hidden');
+            } else {
+                btnWA.classList.add('hidden');
+            }
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    document.querySelector('.close-modal-ekskul').addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    document.getElementById('btnWA').addEventListener('click', () => {
+        if (currentPhone) window.open(`https://wa.me/${currentPhone}`, '_blank');
     });
 });
 </script>
 @endsection
-
-

@@ -198,9 +198,10 @@
 
 /* 1. Navbar Utama (Header) */
 .navbar {
- font-family: 'Nunito', sans-serif;
-        font-weight: 600;
-        font-size: 16px;    position: fixed;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -258,8 +259,9 @@
     align-items: center;
     gap: var(--space-2);
     list-style: none;
-    margin: 0; /* Tambahkan ini untuk reset */
-    padding: 0; /* Tambahkan ini untuk reset */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Memastikan display flex untuk alignment */
 }
 .nav-link {
     font-size: 0.9rem;
@@ -271,10 +273,9 @@
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: center; /* biar teksnya rata tengah */
+    justify-content: center;
     gap: var(--space-1);
-
-    min-width: 90px; /* atur sesuai kebutuhan */
+    min-width: 90px;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -292,10 +293,12 @@
 .nav-item.dropdown {
     position: relative;
 }
+
+/* PERBAIKAN UTAMA: Menghilangkan gap 10px yang bikin menu ilang */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: calc(100% + 10px);
+    top: 100%; /* Diubah dari calc(100% + 10px) ke 100% agar nempel */
     left: 0;
     background: white;
     border-radius: var(--radius-lg);
@@ -309,7 +312,24 @@
     transform: translateY(10px);
     visibility: hidden;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    margin-top: 5px; /* Memberi sedikit jarak visual tapi tetap aman */
 }
+
+/* Bridge (Jembatan) transparan agar mouse tidak 'jatuh' saat pindah ke menu */
+.nav-item.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Jembatan transparan */
+    display: none;
+}
+
+.nav-item.dropdown:hover::after {
+    display: block;
+}
+
 .dropdown-menu a {
     display: block;
     padding: var(--space-2) var(--space-4);
@@ -324,6 +344,7 @@
     color: var(--primary-700);
     transform: translateX(2px);
 }
+
 .nav-item.dropdown:hover > .dropdown-menu {
     display: block;
     opacity: 1;
@@ -333,6 +354,7 @@
 .nav-item.dropdown:hover > .nav-link .dropdown-icon {
     transform: rotate(180deg);
 }
+
 
 /* 4. Tombol Hamburger */
 .navbar-toggler {
@@ -454,6 +476,7 @@
 
 
 
+      
         /* ========================================
            HERO SECTION - SMART SCHOOL
            ======================================== */
@@ -575,7 +598,6 @@
             transform: translateY(-3px) scale(1.05);
             color: white;
         }
-
 
 
 
@@ -1114,10 +1136,35 @@
                         Profil <i class="fas fa-chevron-down dropdown-icon"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="{{ request()->routeIs('about.organization') ? 'active' : '' }}" href="{{ route('about.organization') }}">Profil Singkat</a></li>
-                        <li><a class="{{ request()->routeIs('about.history') ? 'active' : '' }}" href="{{ route('about.history') }}">Sejarah</a></li>
-                        <li><a class="{{ request()->routeIs('about.vision-mission') ? 'active' : '' }}" href="{{ route('about.vision-mission') }}">Visi & Misi</a></li>
-                    </ul>
+    <li>
+        <a class="{{ request()->routeIs('about.organization') ? 'active' : '' }}"
+           href="{{ route('about.organization') }}">
+            Profil Singkat
+        </a>
+    </li>
+
+    <li>
+        <a class="{{ request()->routeIs('about.history') ? 'active' : '' }}"
+           href="{{ route('about.history') }}">
+            Sejarah
+        </a>
+    </li>
+
+    <li>
+        <a class="{{ request()->routeIs('about.vision-mission') ? 'active' : '' }}"
+           href="{{ route('about.vision-mission') }}">
+            Visi & Misi
+        </a>
+    </li>
+
+    <li>
+        <a class="{{ request()->routeIs('facilities.*') ? 'active' : '' }}"
+           href="{{ route('facilities.index') }}">
+            Fasilitas
+        </a>
+    </li>
+</ul>
+
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link {{ request()->routeIs('programs*') || request()->routeIs('academic*') ? 'active' : '' }}" href="#">
@@ -1125,9 +1172,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="{{ request()->routeIs('programs*') ? 'active' : '' }}" href="{{ route('programs') }}">
-                                Program Keahlian
-                            </a>
+                           
                         </li>
                         <li>
                             <a class="{{ request()->routeIs('academic.extracurricular*') ? 'active' : '' }}" href="{{ route('academic.extracurricular') }}">
@@ -1137,11 +1182,15 @@
                     </ul>
                 </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('teachers') }}">Guru & Staff</a>
+           <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('teachers*') ? 'active' : '' }}"
+                href="{{ route('teachers') }}">
+                    Guru & Staff
+                </a>
             </li>
+
            <li class="nav-item dropdown">
-  <a class="nav-link {{ request()->routeIs('information.*') || request()->routeIs('academic*') ? 'active' : '' }}" href="#">
+  <a class="nav-link {{ request()->routeIs('information.*') || request()->routeIs('information*') ? 'active' : '' }}" href="#">
     Informasi <i class="fas fa-chevron-down dropdown-icon"></i>
   </a>
   <ul class="dropdown-menu">
@@ -1207,7 +1256,6 @@
             <li class="sidebar-item dropdown">
                 <a class="sidebar-link" href="#">Akademik <i class="fas fa-plus"></i></a>
                 <ul class="sidebar-submenu">
-                    <li><a href="{{ route('programs') }}">Program Keahlian</a></li>
                     <li><a href="{{ route('academic.extracurricular') }}">Ekstrakurikuler</a></li>
                 </ul>
             </li>

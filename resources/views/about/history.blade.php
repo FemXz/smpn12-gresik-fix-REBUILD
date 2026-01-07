@@ -26,7 +26,7 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100% );
+            background: linear-gradient(135deg, #059263ff 0%, #2c7922ff 100%);
             min-height: 100vh;
         }
 
@@ -38,8 +38,8 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23fff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23a )"/></svg>');
+            background: linear-gradient(135deg, rgba(5, 146, 99, 0.9) 0%, rgba(44, 121, 34, 0.9) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23fff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23a)"/></svg>');
             padding: 80px 0;
             text-align: center;
             position: relative;
@@ -132,7 +132,7 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background: linear-gradient(90deg, #059263ff, #2c7922ff, #43e97b, #38f9d7);
             background-size: 300% 100%;
             animation: gradientShift 3s ease infinite;
         }
@@ -163,7 +163,7 @@
             left: 0;
             width: 50px;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #059263ff, #2c7922ff);
             border-radius: 2px;
         }
 
@@ -177,7 +177,7 @@
 
         .quote-section {
             background: #f7fafc;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #059263ff;
             padding: 25px;
             margin: 30px 0;
             border-radius: 15px;
@@ -187,7 +187,7 @@
         .quote-section::before {
             content: '"';
             font-size: 3.5rem;
-            color: #667eea;
+            color: #059263ff;
             position: absolute;
             top: -5px;
             left: 15px;
@@ -200,31 +200,6 @@
             font-size: 1.15rem;
             color: #2d3748;
             margin-left: 35px;
-        }
-
-        /* Decorative Elements */
-        .floating-shapes {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-            display: none; /* Hidden on mobile for performance */
-        }
-
-        .shape {
-            position: absolute;
-            opacity: 0.1;
-            animation: floatShapes 15s infinite linear;
-        }
-
-        .shape:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-        .shape:nth-child(2) { top: 60%; right: 10%; animation-delay: 5s; }
-        .shape:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 10s; }
-
-        @keyframes floatShapes {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
         }
 
         /* Timeline Design */
@@ -243,7 +218,7 @@
         .timeline-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #059263ff, #2c7922ff);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -251,7 +226,7 @@
             color: white;
             font-size: 1.8rem;
             margin-right: 30px;
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 25px rgba(5, 146, 99, 0.3);
             flex-shrink: 0;
             animation: bounce 2s infinite;
         }
@@ -268,82 +243,24 @@
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #059263ff;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.1rem;
-                padding: 0 10px;
-            }
-
-            .hero-icon {
-                font-size: 4rem;
-            }
-            
-            .main-content {
-                padding: 40px 0;
-            }
-
-            .content-card {
-                padding: 25px;
-                margin: 20px 0;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .content-text {
-                font-size: 1rem;
-                line-height: 1.7;
-            }
-            
-            .timeline-item {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
-            
-            .timeline-icon {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-
-            .timeline-content {
-                border-left: none;
-                border-top: 4px solid #667eea;
-                padding: 20px;
-                text-align: center;
-            }
-
-            .section-title::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .quote-text {
-                font-size: 1rem;
-                margin-left: 0;
-                text-align: center;
-            }
-
-            .quote-section::before {
-                left: 50%;
-                transform: translateX(-50%);
-                top: -15px;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .floating-shapes {
-                display: block;
-            }
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.1rem; padding: 0 10px; }
+            .hero-icon { font-size: 4rem; }
+            .main-content { padding: 40px 0; }
+            .content-card { padding: 25px; margin: 20px 0; }
+            .section-title { font-size: 1.8rem; }
+            .content-text { font-size: 1rem; line-height: 1.7; }
+            .timeline-item { flex-direction: column; text-align: center; align-items: center; }
+            .timeline-icon { margin-right: 0; margin-bottom: 20px; }
+            .timeline-content { border-left: none; border-top: 4px solid #059263ff; padding: 20px; text-align: center; }
+            .section-title::after { left: 50%; transform: translateX(-50%); }
+            .quote-text { font-size: 1rem; margin-left: 0; text-align: center; }
+            .quote-section::before { left: 50%; transform: translateX(-50%); top: -15px; }
         }
 
         /* Scroll Animation */
@@ -368,7 +285,7 @@
                     <i class="fas fa-book-open"></i>
                 </div>
                 <h1 class="hero-title">Sejarah Sekolah</h1>
-                <p class="hero-subtitle">Perjalanan panjang SMP Negeri 12 Gresik dari masa ke masa</p>
+                <p class="hero-subtitle">Perjalanan panjang UPT SMP Negeri 12 Gresik dari masa ke masa</p>
             </div>
         </div>
     </section>
@@ -376,12 +293,6 @@
     <!-- Main Content -->
     <section class="main-content">
         <div class="container">
-            <div class="floating-shapes">
-                <div class="shape"><i class="fas fa-graduation-cap fa-3x"></i></div>
-                <div class="shape"><i class="fas fa-school fa-3x"></i></div>
-                <div class="shape"><i class="fas fa-book fa-3x"></i></div>
-            </div>
-
             <article class="content-card">
                 <div class="timeline-section">
                     <div class="timeline-item fade-in">
@@ -391,19 +302,19 @@
                         <div class="timeline-content">
                             <h2 class="section-title">Awal Mula Berdiri</h2>
                             <p class="content-text">
-                                SMP Negeri 12 Gresik didirikan pada tanggal 17 Agustus 1980, berlokasi strategis di pusat kota Gresik. Pendirian sekolah ini merupakan inisiatif pemerintah daerah untuk memenuhi kebutuhan pendidikan menengah pertama yang terus meningkat di wilayah tersebut. Dengan semangat kemerdekaan, sekolah ini diharapkan menjadi wadah bagi generasi muda untuk meraih cita-cita dan berkontribusi bagi bangsa.
+                                UPT SMP Negeri 12 Gresik pertama kali didirikan pada tanggal **7 November 1983**. Sekolah ini berlokasi di Jl. Raya Wringinanom 13, Gresik, Jawa Timur. Pendirian sekolah ini merupakan bagian dari upaya pemerintah untuk memperluas akses pendidikan menengah pertama di wilayah Wringinanom dan sekitarnya, guna mencetak generasi muda yang berkualitas di Kabupaten Gresik.
                             </p>
                         </div>
                     </div>
 
                     <div class="timeline-item fade-in">
                         <div class="timeline-icon">
-                            <i class="fas fa-trophy"></i>
+                            <i class="fas fa-leaf"></i>
                         </div>
                         <div class="timeline-content">
-                            <h2 class="section-title">Perkembangan dan Prestasi</h2>
+                            <h2 class="section-title">Menjadi Sekolah Adiwiyata</h2>
                             <p class="content-text">
-                                Sejak awal berdirinya, SMP Negeri 12 Gresik terus berbenah dan berkembang. Pada tahun-tahun awal, fokus utama adalah pembangunan infrastruktur dan peningkatan kualitas tenaga pengajar. Berbagai program inovatif mulai diterapkan, termasuk pengembangan kurikulum yang relevan dengan kebutuhan zaman. Hasilnya, sekolah ini mulai menorehkan berbagai prestasi, baik di bidang akademik maupun non-akademik.
+                                Dalam perjalanannya, UPT SMP Negeri 12 Gresik dikenal sebagai sekolah yang sangat peduli terhadap lingkungan. Sekolah ini telah berhasil meraih predikat sebagai **Sekolah Adiwiyata**, yang menunjukkan komitmen seluruh warga sekolah dalam melestarikan lingkungan, mencegah pencemaran, dan mencegah kerusakan lingkungan melalui berbagai inovasi media ajar dan kegiatan pembiasaan.
                             </p>
                         </div>
                     </div>
@@ -413,9 +324,9 @@
                             <i class="fas fa-rocket"></i>
                         </div>
                         <div class="timeline-content">
-                            <h2 class="section-title">Era Modern & Masa Depan</h2>
+                            <h2 class="section-title">Era Digital & Inovasi</h2>
                             <p class="content-text">
-                                Memasuki era digital, SMP Negeri 12 Gresik tidak ketinggalan dalam mengadopsi teknologi. Fasilitas komputer dan akses internet diperbarui, serta pembelajaran berbasis teknologi diintegrasikan ke dalam kurikulum. Tantangan ke depan adalah mempersiapkan siswa untuk menjadi warga negara yang adaptif dan berdaya saing tinggi di tengah persaingan global.
+                                Memasuki era modern, sekolah terus berinovasi dalam bidang literasi digital. Salah satu inovasi unggulannya adalah **Media Ajar GESIT P-5 SPENDALAS**, yang dirancang untuk meningkatkan efektivitas pembelajaran paradigma baru yang kreatif, inovatif, dan kolaboratif bagi seluruh peserta didik di era global.
                             </p>
                         </div>
                     </div>
@@ -423,7 +334,7 @@
 
                 <div class="quote-section fade-in">
                     <p class="quote-text">
-                        "Pendidikan adalah senjata paling ampuh yang bisa Anda gunakan untuk mengubah dunia." - Nelson Mandela
+                        "Terwujudnya sekolah yang bermutu, berkepribadian Pancasila, berwawasan lingkungan serta berakhlakul karimah."
                     </p>
                 </div>
             </article>
@@ -431,7 +342,6 @@
     </section>
 
     <script>
-        // Scroll Animation
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -441,7 +351,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing after animation
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -452,9 +362,4 @@
     </script>
 </body>
 </html>
-
-
-
 @endsection
-
-

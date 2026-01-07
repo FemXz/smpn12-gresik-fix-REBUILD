@@ -1,4 +1,5 @@
 <?php $__env->startSection('title', 'Beranda - SMP Negeri 12 Gresik Smart School'); ?>
+
 <?php $__env->startSection('description', 'SMP Negeri 12 Gresik adalah Smart School unggulan yang mengutamakan kualitas pendidikan dengan teknologi modern dan tenaga pengajar profesional.'); ?>
 
 <?php $__env->startPush('styles'); ?>
@@ -75,196 +76,7 @@
         opacity: 0.9;
     }
 
-  /* =========================
-   NEWS SECTION
-   ========================= */
-.news {
-    padding: 60px 20px;
-    background: #f9fafbbe; /* abu lembut */
-}
-
-/* Grid */
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
-    gap: 2rem;
-    justify-content: center;
-}
-
-/* Card */
-.news-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 350px;
-    position: relative;
-    padding: 18px;
-}
-
-.news-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-/* Image */
-.news-image {
-    height: 220px;
-    border-radius: 18px;
-    overflow: hidden;
-    position: relative;
-    background: #ddd;
-}
-
-.news-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.news-card:hover .news-image img {
-    transform: scale(1.08);
-}
-
-/* Date badge */
-.news-date {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: linear-gradient(135deg, #16a34a, #22c55e);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* Content */
-.news-content {
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.news-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
-.news-title a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
-}
-
-.news-title a:hover {
-    color: #16a34a;
-}
-
-.news-excerpt {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #6b7280;
-    flex-grow: 1;
-    margin-bottom: 15px;
-}
-
-
-/* 📱 Mobile 360px Fix */
-@media (max-width: 390px) {
-    .news-card {
-        max-width: 100%;
-        padding: 14px;
-        border-radius: 16px;
-    }
-
-    .news-image {
-        height: 180px;
-        border-radius: 14px;
-    }
-
-    .news-date {
-        top: 10px;
-        right: 10px;
-        font-size: 0.7rem;
-        padding: 4px 10px;
-        border-radius: 10px;
-    }
-
-    .news-content {
-        padding: 14px 4px 0 4px;
-    }
-
-    .news-title {
-        font-size: 1rem;
-        margin-bottom: 8px;
-        line-height: 1.35;
-    }
-
-    .news-excerpt {
-        font-size: 0.8rem;
-        line-height: 1.4;
-        margin-bottom: 12px;
-    }
-}
-
-
-
-
-/* Button */
-.news-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #16a34a, #22c55e);
-    color: white;
-    padding: 10px 18px;
-    border-radius: 9999px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(22,163,74,0.3);
-    transition: all 0.3s ease;
-    margin-top: auto; /* selalu ke bawah */
-}
-
-.news-button i {
-    margin-left: 8px;
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.news-button:hover {
-    background: linear-gradient(135deg, #15803d, #16a34a);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(22,163,74,0.4);
-}
-
-.news-button:hover i {
-    transform: translateX(4px);
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-    .news-card {
-        max-width: 100%;
-        max-height: 90%;
-    }
-}
+ 
 
     /* Events Section */
     .events {
@@ -342,86 +154,7 @@
         margin-bottom: var(--space-3);
     }
 
-    /* Facilities Section */
-    .facilities {
-        padding: var(--space-24) 0;
-        background: white;
-    }
-
-    .facilities-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--space-8);
-    }
-
-    .facility-card {
-        background: white;
-        border-radius: var(--radius-2xl);
-        padding: var(--space-6);
-        box-shadow: var(--shadow-md);
-        transition: var(--transition-bounce);
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .facility-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-primary);
-        transform: scaleX(0);
-        transition: var(--transition-normal);
-    }
-
-    .facility-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: var(--shadow-xl);
-    }
-
-    .facility-card:hover::before {
-        transform: scaleX(1);
-    }
-
-    .facility-icon {
-        width: 80px;
-        height: 80px;
-        background: var(--gradient-primary);
-        border-radius: var(--radius-xl);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto var(--space-4);
-        box-shadow: var(--shadow-glow);
-        transition: var(--transition-bounce);
-    }
-
-    .facility-card:hover .facility-icon {
-        transform: scale(1.1) rotate(5deg);
-    }
-
-    .facility-icon i {
-        font-size: 2rem;
-        color: white;
-    }
-
-    .facility-name {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: var(--gray-900);
-        margin-bottom: var(--space-3);
-    }
-
-    .facility-description {
-        color: var(--gray-600);
-        line-height: 1.6;
-        font-size: 0.9rem;
-    }
-
+    
     /* CTA Section */
     .cta {
         background: var(--gradient-hero);
@@ -569,6 +302,15 @@
 <?php $__env->stopPush(); ?>
 
 <?php $__env->startSection('content'); ?>
+
+
+
+
+
+
+
+
+
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
@@ -582,9 +324,7 @@
         <a href="<?php echo e(route('about')); ?>" class="btn btn-primary">
           <i class="fas fa-info-circle"></i> Tentang Kami
         </a>
-        <a href="<?php echo e(route('student.portal') ?? '#'); ?>" class="btn btn-outline">
-          <i class="fas fa-user-graduate"></i> Portal Siswa
-        </a>
+       
       </div>
     </div>
 
@@ -664,6 +404,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <style>
+
+
+
 /* === SWIPER STACK SHOWCASE === */
 .stackShowcase {
   width: 100%;
@@ -932,404 +675,1946 @@ slider.addEventListener("touchmove", e => {
 
 
 
+   <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambutan Kepala Sekolah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-       /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Poppins', sans-serif;
+        }
 
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', 'Poppins', sans-serif;
+        /* Hero Section */
+        .welcome-hero {
+            background: linear-gradient(135deg, #f0f9f7 0%, #e8f5f3 100%);
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .welcome-hero__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        /* Hero Image Container */
+        .welcome-hero__image-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .welcome-hero__image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .welcome-hero__image:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-hero__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .welcome-hero__image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Name Badge Overlay */
+        .welcome-hero__name-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(27, 94, 32, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 24px;
+            border-radius: 12px;
+            color: white;
+            text-align: left;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 0.6s ease-out 0.3s both;
+        }
+
+        .welcome-hero__name-badge-name {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .welcome-hero__name-badge-position {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            color: #c8e6c9;
+            letter-spacing: 0.3px;
+        }
+
+        /* Hero Content */
+        .welcome-hero__content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .welcome-hero__subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+            color: #4caf50;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .welcome-hero__subtitle::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #4caf50;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .welcome-hero__content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 1.3;
+            color: #1b5e20;
+            margin-bottom: 28px;
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .welcome-hero__text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.9;
+            color: #424242;
+            margin-bottom: 20px;
+            text-align: justify;
+            transition: color 0.3s ease;
+        }
+
+        .welcome-hero__text:hover {
+            color: #1b5e20;
+        }
+
+        .welcome-hero__text:last-of-type {
+            margin-bottom: 32px;
+        }
+
+        /* Accent Line */
+        .welcome-hero__accent {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #4caf50 0%, #81c784 100%);
+            border-radius: 2px;
+            margin: 32px 0;
+        }
+
+        /* CTA Button */
+        .welcome-hero__cta {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+            border: none;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .welcome-hero__cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(76, 175, 80, 0.4);
+            background: linear-gradient(135deg, #558b2f 0%, #1b5e20 100%);
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .welcome-hero__container {
+                gap: 40px;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .welcome-hero__image {
+                height: 420px;
+            }
+
+            .welcome-hero__content h2 {
+                font-size: 36px;
+            }
+
+            .welcome-hero__text {
+                font-size: 15px;
+                line-height: 1.8;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .welcome-hero {
+                padding: 50px 20px;
+                min-height: auto;
+            }
+
+            .welcome-hero__container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .welcome-hero__image {
+                height: 380px;
+            }
+
+            .welcome-hero__content h2 {
+                font-size: 28px;
+            }
+
+            .welcome-hero__text {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .welcome-hero__name-badge {
+                padding: 16px 20px;
+                bottom: 16px;
+                left: 16px;
+                right: 16px;
+            }
+
+            .welcome-hero__name-badge-name {
+                font-size: 16px;
+            }
+
+            .welcome-hero__name-badge-position {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome-hero {
+                padding: 40px 16px;
+            }
+
+            .welcome-hero__container {
+                gap: 20px;
+            }
+
+            .welcome-hero__image {
+                height: 300px;
+            }
+
+            .welcome-hero__content h2 {
+                font-size: 22px;
+                margin-bottom: 16px;
+            }
+
+            .welcome-hero__subtitle {
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+
+            .welcome-hero__text {
+                font-size: 13px;
+                line-height: 1.6;
+                margin-bottom: 16px;
+            }
+
+            .welcome-hero__accent {
+                margin: 20px 0;
+            }
+
+            .welcome-hero__name-badge {
+                padding: 12px 16px;
+                bottom: 12px;
+                left: 12px;
+                right: 12px;
+            }
+
+            .welcome-hero__name-badge-name {
+                font-size: 14px;
+            }
+
+            .welcome-hero__name-badge-position {
+                font-size: 11px;
+            }
+
+            .welcome-hero__cta {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="welcome-hero">
+        <div class="welcome-hero__container">
+            <!-- Image Section dengan Name Badge -->
+            <div class="welcome-hero__image-wrapper">
+                <div class="welcome-hero__image">
+                    <img src="<?php echo e($hero && $hero->image ? asset($hero->image) : 'https://via.placeholder.com/600x500?text=Foto+Kepala+Sekolah'); ?>" alt="Kepala Sekolah">
+                    
+                    <!-- Name Badge Overlay -->
+                    <div class="welcome-hero__name-badge">
+                        <div class="welcome-hero__name-badge-name">
+                            <?php echo e($hero->name ?? 'Drs. Nama Kepala Sekolah'); ?>
+
+                        </div>
+                        <div class="welcome-hero__name-badge-position">
+                            <?php echo e($hero->position ?? 'Kepala Sekolah'); ?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="welcome-hero__content">
+                <div class="welcome-hero__subtitle">
+                    <?php echo e($hero->subtitle ?? 'Sambutan Kepala Sekolah'); ?>
+
+                </div>
+
+                <h2>
+                    <?php echo e($hero->title ?? 'Selamat Datang di Sekolah Kami'); ?>
+
+                </h2>
+
+                <p class="welcome-hero__text">
+                    <?php echo e($hero->text1 ?? 'Assalamu\'alaikum... (teks default jika belum ada data)'); ?>
+
+                </p>
+
+                <p class="welcome-hero__text">
+                    <?php echo e($hero->text2 ?? 'Setiap siswa adalah aset berharga... (teks default)'); ?>
+
+                </p>
+
+                <div class="welcome-hero__accent"></div>
+
+                <button class="welcome-hero__cta">
+                    Pelajari Lebih Lanjut
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<!-- SECTION TENTANG SMPN 12 GRESIK -->
+<style>
+    .tentang-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        padding: 80px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .tentang-section::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(135deg, #148d46ff 0%, #0f6e3fff 100%);
+        border-radius: 50%;
+        opacity: 0.05;
+    }
+
+    .tentang-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .tentang-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .tentang-header h2 {
+        font-size: 2.5rem;
+        color: #059669;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .tentang-header p {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .tentang-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .tentang-image {
+        position: relative;
+    }
+
+    .tentang-image img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(16, 185, 129, 0.2);
+        display: block;
+    }
+
+    .tentang-image::after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: 20px;
+        bottom: 20px;
+        border: 3px solid #10b981;
+        border-radius: 15px;
+        z-index: -1;
+    }
+
+    .tentang-text {
+        padding: 20px;
+    }
+
+    .visi-misi-item {
+        margin-bottom: 40px;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        border-left: 5px solid #10b981;
+        box-shadow: 0 3px 15px rgba(16, 185, 129, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .visi-misi-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+    }
+
+    .visi-misi-item h3 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #10b981;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .visi-misi-item .icon {
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .visi-misi-item p {
+        color: #555;
+        line-height: 1.8;
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+        .tentang-section {
+            padding: 60px 20px;
+        }
+
+        .tentang-header h2 {
+            font-size: 1.8rem;
+        }
+
+        .tentang-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .tentang-image::after {
+            top: -15px;
+            left: -15px;
+            right: 15px;
+            bottom: 15px;
+        }
+
+        .tentang-text {
+            padding: 0;
+        }
+
+        .visi-misi-item {
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .tentang-section {
+            padding: 40px 15px;
+        }
+
+        .tentang-header h2 {
+            font-size: 1.5rem;
+        }
+
+        .visi-misi-item {
+            padding: 15px;
+        }
+
+        .visi-misi-item h3 {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
+<section class="tentang-section">
+    <div class="tentang-container">
+        <div class="tentang-header">
+            <h2>Tentang SMPN 12 Gresik</h2>
+            <p>Perjalanan Anda Menuju Pengetahuan & Penemuan Jati Diri</p>
+        </div>
+
+        <div class="tentang-content">
+            <div class="tentang-image">
+                     <img src="<?php echo e(asset('assets/ha.jpg')); ?>" alt="Foto Smpn">
+        </div>
+
+            <div class="tentang-text">
+                <div class="visi-misi-item">
+                    <h3>
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        Visi Kami
+                    </h3>
+                    <p>"Terwujudnya sekolah yang bermutu, berkepribadian Pancasila, berwawasan lingkungan serta berakhlakul karimah"</p>
+                </div>
+
+                <div class="visi-misi-item">
+                    <h3>
+                        <div class="icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        Misi Kami
+                    </h3>
+                    <p>Melaksanakan pengembangan Kurikulum Operasional Satuan Pendidikan, mengembangkan pembelajaran paradigma baru yang kreatif-inovatif, meningkatkan prestasi akademik dan non akademik, serta mewujudkan lingkungan sekolah yang sejuk dan asri.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 
+    Catatan: 
+    1. Pastikan Anda sudah memuat Font Awesome dan Swiper.js di file utama Anda.
+    2. Jika belum, saya sertakan link CDN-nya di dalam section ini agar langsung jalan.
+-->
+
+<!-- Swiper & Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+    .facilities-section {
+        --deep-green: #064e3b; 
+        --accent-green: #10b981;
+        --text-white: #ffffff;
+        --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        background-color: #f8fafc;
+        padding: 100px 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .facilities-section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .facilities-section .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .facilities-section .section-header h2 {
+        font-size: 3rem;
+        color: var(--deep-green);
+        font-weight: 800;
+        margin-bottom: 15px;
+        letter-spacing: -1px;
+    }
+
+    .facilities-section .section-header p {
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+
+    /* Swiper Styling */
+    .facilities-section .swiper {
+        width: 100%;
+        padding: 20px 0 80px !important;
+    }
+
+    .facilities-section .facility-card {
+        position: relative;
+        height: 450px;
+        border-radius: 30px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        background: #fff;
+    }
+
+    .facilities-section .facility-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition-smooth);
+    }
+
+    /* Overlay & Hover Effect */
+    .facilities-section .facility-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(6, 78, 59, 0.9) 0%, rgba(6, 78, 59, 0.2) 60%, transparent 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 35px;
+        transition: var(--transition-smooth);
+    }
+
+    .facilities-section .facility-info {
+        transform: translateY(20px);
+        transition: var(--transition-smooth);
+    }
+
+    .facilities-section .facility-icon {
+        width: 50px;
+        height: 50px;
+        background: var(--text-white);
+        color: var(--deep-green);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        transition: var(--transition-smooth);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .facilities-section .facility-name {
+        color: var(--text-white);
+        font-size: 1.75rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .facilities-section .facility-description {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: var(--transition-smooth);
+    }
+
+    /* Hover State */
+    .facilities-section .facility-card:hover .facility-image {
+        transform: scale(1.15);
+    }
+
+    .facilities-section .facility-card:hover .facility-overlay {
+        background: linear-gradient(to top, var(--deep-green) 0%, rgba(6, 78, 59, 0.6) 100%);
+    }
+
+    .facilities-section .facility-card:hover .facility-info {
+        transform: translateY(0);
+    }
+
+    .facilities-section .facility-card:hover .facility-description {
+        opacity: 1;
+        max-height: 150px;
+        margin-top: 15px;
+    }
+
+    .facilities-section .facility-card:hover .facility-icon {
+        background: var(--accent-green);
+        color: white;
+        transform: rotate(-10deg);
+    }
+
+    /* Navigation */
+    .facilities-section .swiper-button-next, 
+    .facilities-section .swiper-button-prev {
+        color: var(--deep-green) !important;
+        background: white;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+    
+    .facilities-section .swiper-button-next:hover, 
+    .facilities-section .swiper-button-prev:hover {
+        background: var(--deep-green);
+        color: white !important;
+    }
+
+    .facilities-section .swiper-button-next:after, 
+    .facilities-section .swiper-button-prev:after {
+        font-size: 1.2rem !important;
+        font-weight: 900;
+    }
+
+    .facilities-section .swiper-pagination-bullet-active {
+        background: var(--deep-green) !important;
+        width: 25px;
+        border-radius: 10px;
+    }
+
+    /* Premium Button Style */
+    .facilities-section .btn-wrapper {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .facilities-section .btn-premium {
+        display: inline-flex;
+        align-items: center;
+        padding: 16px 40px;
+        background: linear-gradient(135deg, var(--deep-green) 0%, #059669 100%);
+        color: white !important;
+        font-weight: 700;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-radius: 50px;
+        transition: all 0.4s ease;
+        text-decoration: none !important;
+        box-shadow: 0 10px 30px rgba(6, 78, 59, 0.3);
+        border: none;
+    }
+
+    .facilities-section .btn-premium:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(6, 78, 59, 0.4);
+        background: linear-gradient(135deg, #059669 0%, var(--accent-green) 100%);
+    }
+
+    .facilities-section .btn-premium i {
+        margin-left: 12px;
+        transition: 0.3s;
+    }
+
+    .facilities-section .btn-premium:hover i {
+        transform: translateX(8px);
+    }
+
+    @media (max-width: 767px) {
+        .facilities-section .section-header h2 { font-size: 2.2rem; }
+        .facilities-section .swiper-button-next,
+        .facilities-section .swiper-button-prev { display: none !important; }
+        .facilities-section .facility-card { height: 400px; }
+    }
+</style>
+
+<section class="facilities-section">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Fasilitas <span style="color: var(--accent-green);">Unggulan</span></h2>
+            <p>Lingkungan belajar modern dengan fasilitas lengkap untuk mendukung kenyamanan dan prestasi siswa.</p>
+        </div>
+
+        <?php if(!empty($data['facilities']) && count($data['facilities']) > 0): ?>
+        <div class="swiper facilitySwiper">
+            <div class="swiper-wrapper">
+                <?php $__currentLoopData = $data['facilities']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $facility): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="swiper-slide">
+                    <div class="facility-card">
+                        <img src="<?php echo e(asset('storage/' . $facility->image)); ?>" class="facility-image" alt="<?php echo e($facility->name); ?>">
+                        <div class="facility-overlay">
+                            <div class="facility-info">
+                                <?php if(!empty($facility->icon)): ?>
+                                <div class="facility-icon">
+                                    <i class="fas <?php echo e($facility->icon); ?>"></i>
+                                </div>
+                                <?php endif; ?>
+                                <h3 class="facility-name"><?php echo e($facility->name); ?></h3>
+                                <p class="facility-description"><?php echo e($facility->description); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <?php else: ?>
+            <p style="text-align:center;color:#666;padding: 50px;">Data fasilitas belum tersedia.</p>
+        <?php endif; ?>
+
+        
+        <div class="btn-wrapper">
+            <a href="<?php echo e(route('facilities.index')); ?>" class="btn-premium">
+                Lihat Semua Fasilitas <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    new Swiper(".facilitySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: false,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: ".swiper-pagination", clickable: true, dynamicBullets: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+</script>
+
+
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Latest News Section -->
+
+<style>
+    /* =========================
+   IMPROVED NEWS SECTION
+   ========================= */
+:root {
+    --primary-color: #16a34a;
+    --primary-dark: #15803d;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --bg-light: #f9fafb;
+    --white: #ffffff;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hero Section */
-.welcome-hero {
-    background-color: #f0f9f7;
-    padding: 60px 20px;
-}
-
-.welcome-hero__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-/* Hero Image */
-.welcome-hero__image {
-    width: 100%;
-    height: 450px;
-    background-color: #e0f2f1;
-    border-radius: 12px;
+.news-section {
+    padding: 80px 0;
+    background-color: white;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.welcome-hero__image img {
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Swiper Customization */
+.news-slider-container {
+    position: relative;
+    padding: 20px 10px 50px;
+}
+
+.news-swiper {
+    padding: 10px 10px 60px !important;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+    color: var(--primary-color);
+    background: var(--white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover, 
+.swiper-button-prev:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color) !important;
+}
+
+/* News Card Design */
+.news-card {
+    background: var(--white);
+    border-radius: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.03);
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.news-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10; /* Konsistensi ukuran gambar */
+    overflow: hidden;
+}
+
+.news-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.welcome-hero__image img:hover {
-    transform: scale(1.05);
+.news-card:hover .news-image-wrapper img {
+    transform: scale(1.1);
 }
 
-/* Hero Content */
-.welcome-hero__subtitle {
-    font-family: 'Poppins', sans-serif;
+.news-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #9ca3af;
+}
+
+.news-date-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--white);
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    z-index: 2;
+}
+
+.news-date-badge .day {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.news-date-badge .month {
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    color: var(--text-muted);
     text-transform: uppercase;
-    font-size: 14px;
-    color: #4caf50;
-    margin-bottom: 12px;
 }
 
-.welcome-hero__content h2 {
-    font-family: 'Inter', sans-serif;
+.news-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card-title {
+    font-size: 1.25rem;
     font-weight: 700;
-    font-size: 32px;
     line-height: 1.4;
-    color: #1b5e20;
+    margin-bottom: 12px;
+    color: var(--text-main);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Batasi judul maksimal 2 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3.5rem; /* Pastikan tinggi judul konsisten */
+}
+
+.news-card-title a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.news-card-title a:hover {
+    color: var(--primary-color);
+}
+
+.news-card-excerpt {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
     margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Batasi kutipan maksimal 3 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-.welcome-hero__text {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 16px;
+.news-card-footer {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #f3f4f6;
 }
 
-.welcome-hero__text:last-of-type {
-    margin-bottom: 28px;
+.btn-read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
 }
 
-/* Signature */
-.welcome-hero__signature {
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid #c8e6c9;
+.btn-read-more i {
+    transition: transform 0.3s ease;
 }
 
-.welcome-hero__name {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #1b5e20;
-    margin-bottom: 4px;
+.btn-read-more:hover {
+    color: var(--primary-dark);
 }
 
-.welcome-hero__position {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    color: #558b2f;
-    font-style: italic;
+.btn-read-more:hover i {
+    transform: translateX(5px);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .welcome-hero__container {
-        gap: 40px;
-    }
-
-    .welcome-hero__image {
-        height: 400px;
-    }
-
-    .welcome-hero__content h2 {
-        font-size: 28px;
-    }
-
-    .welcome-hero__text {
-        font-size: 15px;
-        line-height: 1.7;
-    }
+.btn-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 14px 0 rgba(22, 163, 74, 0.39);
+    transition: var(--transition);
 }
 
+.btn-view-all:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(22, 163, 116, 0.23);
+    color: var(--white);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .welcome-hero {
-        padding: 40px 20px;
+    .section-title {
+        font-size: 1.8rem;
     }
-
-    .welcome-hero__container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .news-section {
+        padding: 60px 0;
     }
-
-    .welcome-hero__image {
-        height: 350px;
-    }
-
-    .welcome-hero__content h2 {
-        font-size: 24px;
-    }
-
-    .welcome-hero__text {
-        font-size: 14px;
-        line-height: 1.6;
+    .swiper-button-next, 
+    .swiper-button-prev {
+        display: none; /* Sembunyikan panah di mobile, gunakan swipe */
     }
 }
+</style>
 
-@media (max-width: 480px) {
-    .welcome-hero {
-        padding: 30px 16px;
-    }
-
-    .welcome-hero__container {
-        gap: 20px;
-    }
-
-    .welcome-hero__image {
-        height: 280px;
-    }
-
-    .welcome-hero__content h2 {
-        font-size: 20px;
-    }
-
-    .welcome-hero__subtitle {
-        font-size: 12px;
-    }
-
-    .welcome-hero__text {
-        font-size: 13px;
-    }
-
-    .welcome-hero__name {
-        font-size: 14px;
-    }
-
-    .welcome-hero__position {
-        font-size: 12px;
-    }
-}
-
-    </style>
-<section class="welcome-hero">
-    <div class="welcome-hero__container">
-
-       <div class="welcome-hero__image">
-   <img src="<?php echo e($hero && $hero->image ? asset($hero->image) : 'https://via.placeholder.com/500x450?text=Foto+Kepala+Sekolah'); ?>" alt="Kepala Sekolah">
-
-</div>
-
-
-        <div class="welcome-hero__content">
-
-            <div class="welcome-hero__subtitle">
-                <?php echo e($hero->subtitle ?? 'Sambutan Kepala Sekolah'); ?>
-
-            </div>
-
-            <h2>
-                <?php echo e($hero->title ?? 'Selamat Datang di Sekolah Kami'); ?>
-
-            </h2>
-
-            <p class="welcome-hero__text">
-                <?php echo e($hero->text1 ?? 'Assalamu\'alaikum... (teks default jika belum ada data)'); ?>
-
-            </p>
-
-            <p class="welcome-hero__text">
-                <?php echo e($hero->text2 ?? 'Setiap siswa adalah aset berharga... (teks default)'); ?>
-
-            </p>
-
-            <div class="welcome-hero__signature">
-                <div class="welcome-hero__name">
-                    <?php echo e($hero->name ?? 'Drs. Nama Kepala Sekolah'); ?>
-
-                </div>
-                <div class="welcome-hero__position">
-                    <?php echo e($hero->position ?? 'Kepala Sekolah'); ?>
-
-                </div>
-            </div>
-
-        </div>
+<!-- News Section -->
+<section class="news-section relative py-24 bg-white overflow-hidden">
+    <!-- Subtle Background Decoration -->
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-green-50 rounded-full blur-[120px] opacity-60"></div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-emerald-50 rounded-full blur-[100px] opacity-50"></div>
     </div>
-</section>
 
-
-
-<!-- Latest News Section -->
-<section class="news">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Berita Terbaru</h2>
-            <p>Ikuti perkembangan dan prestasi terbaru dari SMP Negeri 12 Gresik</p>
+    <div class="container relative z-10 mx-auto px-4 max-w-7xl">
+        <!-- Section Header - Centered to match Facilities Section -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="flex flex-col items-center justify-center mb-4">
+                <span class="text-green-600 font-bold uppercase tracking-widest text-sm mb-2">Informasi Terkini</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                    Berita <span class="text-green-600">Terbaru</span>
+                </h2>
+                <div class="w-20 h-1 bg-green-600 mt-4 rounded-full"></div>
+            </div>
+            <p class="text-gray-500 text-lg leading-relaxed max-w-2xl mx-auto">
+                Ikuti perkembangan dan prestasi terbaru dari SMP Negeri 12 Gresik melalui update berita kami yang terpercaya.
+            </p>
         </div>
 
-        <div class="news-grid">
-            <?php if(isset($data['latest_news']) && $data['latest_news']->count()): ?>
-                <?php $__currentLoopData = $data['latest_news']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $news): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <article class="news-card" data-aos="fade-up" data-aos-delay="<?php echo e(($index + 1) * 100); ?>">
-<div class="news-image">
-    <?php if(!empty($news->image)): ?>
-      <img src="<?php echo e(asset($news->image)); ?>" alt="<?php echo e($news->title); ?>">
+        <!-- News Slider Container -->
+        <div class="news-slider-wrapper relative group" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper news-swiper !overflow-visible md:!overflow-hidden px-4">
+                <div class="swiper-wrapper">
+                    <?php if(isset($data['latest_news']) && $data['latest_news']->count()): ?>
+                        <?php $__currentLoopData = $data['latest_news']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <div class="swiper-slide h-auto py-6">
+                                <article class="premium-news-card group">
+                                    <!-- Image Container -->
+                                    <div class="card-image-box">
+                                        <?php if($item->image): ?>
+                                            <img src="<?php echo e(asset($item->image)); ?>" alt="<?php echo e($item->title); ?>" class="card-img" loading="lazy">
+                                        <?php else: ?>
+                                            <div class="card-img-placeholder">
+                                                <i class="fas fa-newspaper text-5xl text-gray-200"></i>
+                                            </div>
+                                        <?php endif; ?>
+                                        
+                                        <?php if($item->category): ?>
+                                            <div class="card-badge">
+                                                <?php echo e($item->category); ?>
 
-    <?php else: ?>
-        <i class="fas fa-newspaper"></i>
-    <?php endif; ?>
-    <div class="news-date"><?php echo e($news->published_at->format('d M Y')); ?></div>
-</div>
+                                            </div>
+                                        <?php endif; ?>
 
+                                        <!-- Hover Overlay -->
+                                        <div class="card-overlay">
+                                            <a href="<?php echo e(route('information.news.show', $item->slug)); ?>" class="overlay-icon">
+                                                <i class="fas fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
 
-                        <div class="news-content">
-                            <h3 class="news-title">
-                                <a href="<?php echo e(route('information.news.show', $news->slug)); ?>">
-                                    <?php echo e($news->title); ?>
+                                    <!-- Content -->
+                                    <div class="card-body">
+                                        <div class="card-meta">
+                                            <div class="meta-item">
+                                                <i class="far fa-calendar-alt"></i>
+                                                <span><?php echo e($item->published_at ? $item->published_at->format('d M Y') : $item->created_at->format('d M Y')); ?></span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="far fa-user"></i>
+                                                <span><?php echo e($item->author ?? 'Admin'); ?></span>
+                                            </div>
+                                        </div>
 
-                                </a>
-                            </h3>
-                            <p class="news-excerpt">
-                                <?php echo e(\Illuminate\Support\Str::limit(strip_tags($news->content), 120)); ?>
+                                        <h3 class="card-title">
+                                            <a href="<?php echo e(route('information.news.show', $item->slug)); ?>">
+                                                <?php echo e($item->title); ?>
 
-                            </p>
-                            <a href="<?php echo e(route('information.news.show', $news->slug)); ?>" class="btn btn-primary">
-                                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
-                            </a>
+                                            </a>
+                                        </h3>
+
+                                        <p class="card-text">
+                                            <?php echo e(Str::limit(strip_tags($item->content), 100)); ?>
+
+                                        </p>
+
+                                        <div class="card-footer">
+                                            <a href="<?php echo e(route('information.news.show', $item->slug)); ?>" class="read-more-btn">
+                                                <span>Baca Selengkapnya</span>
+                                                <div class="icon-circle">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <?php else: ?>
+                        <!-- Empty State -->
+                        <div class="col-span-full py-20 text-center bg-gray-50 rounded-3xl border-2 border-dashed border-gray-200">
+                            <i class="fas fa-newspaper text-6xl text-gray-300 mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Belum Ada Berita</h3>
+                            <p class="text-gray-500">Nantikan informasi terbaru dari kami segera.</p>
                         </div>
-                    </article>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            <?php else: ?>
-                <p class="text-center text-gray-500" data-aos="fade-up">
-                    Belum ada berita terbaru yang ditampilkan.
-                </p>
-            <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+            <!-- Slider Navigation Buttons - Positioned on sides for Desktop -->
+            <button class="nav-btn prev-news group absolute left-[-20px] md:left-[-60px] top-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:flex" aria-label="Previous slide">
+                <i class="fas fa-chevron-left text-gray-400 group-hover:text-green-600 transition-colors"></i>
+            </button>
+            <button class="nav-btn next-news group absolute right-[-20px] md:right-[-60px] top-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:flex" aria-label="Next slide">
+                <i class="fas fa-chevron-right text-gray-400 group-hover:text-green-600 transition-colors"></i>
+            </button>
+            
+            <!-- Pagination Dots - Visible on Mobile -->
+            <div class="swiper-pagination !static mt-10"></div>
         </div>
 
-        <div class="text-center mt-6" data-aos="fade-up">
-            <a href="<?php echo e(route('information.news')); ?>" class="btn btn-primary">
-                <i class="fas fa-newspaper"></i>
-                Lihat Semua Berita
+        <!-- View All Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+            <a href="<?php echo e(route('information.news')); ?>" class="view-all-btn group">
+                <span class="relative z-10">Lihat Semua Berita</span>
+                <i class="fas fa-th-large ml-2 relative z-10 group-hover:rotate-90 transition-transform duration-500"></i>
+                <div class="btn-bg"></div>
             </a>
         </div>
     </div>
 </section>
 
+<?php $__env->startPush('styles'); ?>
+<style>
+    /* PREMIUM NEWS SECTION STYLES - CENTERED VERSION */
+    
+    /* Navigation Buttons */
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        border: 1px solid #f3f4f6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
 
-<!-- Upcoming Events Section -->
-<section class="events">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Agenda Mendatang</h2>
-            <p>Jangan lewatkan kegiatan dan acara penting di sekolah kami</p>
-        </div>
+    .nav-btn:hover {
+        background: #16a34a;
+        border-color: #16a34a;
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 15px 30px rgba(22, 163, 74, 0.25);
+    }
 
-        <div class="events-grid">
-            <?php if(isset($data['upcoming_events']) && count($data['upcoming_events']) > 0): ?>
-                <?php $__currentLoopData = $data['upcoming_events']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="event-card" data-aos="fade-up" data-aos-delay="<?php echo e(($index + 1) * 100); ?>">
-                    <div class="event-date">
-                        <div class="date-box">
-                            <div class="day"><?php echo e(date('d', strtotime($event['date']))); ?></div>
-                            <div class="month"><?php echo e(date('M', strtotime($event['date']))); ?></div>
-                        </div>
-                        <div class="event-meta">
-                            <div class="event-time">
-                                <i class="fas fa-clock"></i>
-                                <?php echo e($event['time']); ?>
+    .nav-btn:hover i {
+        color: white !important;
+    }
 
+    /* Premium Card Design */
+    .premium-news-card {
+        background: white;
+        border-radius: 24px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid #f3f4f6;
+        position: relative;
+        z-index: 1;
+    }
+
+    .premium-news-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1);
+        border-color: transparent;
+    }
+
+    .card-image-box {
+        position: relative;
+        height: 220px;
+        margin: 12px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .premium-news-card:hover .card-img {
+        transform: scale(1.1);
+    }
+
+    .card-img-placeholder {
+        width: 100%;
+        height: 100%;
+        background: #f9fafb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: rgba(22, 163, 74, 0.9);
+        backdrop-filter: blur(8px);
+        color: white;
+        padding: 6px 16px;
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        z-index: 2;
+    }
+
+    .card-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(22, 163, 74, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 3;
+    }
+
+    .premium-news-card:hover .card-overlay {
+        opacity: 1;
+    }
+
+    .overlay-icon {
+        width: 45px;
+        height: 45px;
+        background: white;
+        color: #16a34a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        transform: translateY(15px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+    }
+
+    .premium-news-card:hover .overlay-icon {
+        transform: translateY(0);
+    }
+
+    /* Card Body */
+    .card-body {
+        padding: 15px 24px 28px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-meta {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 12px;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        color: #9ca3af;
+    }
+
+    .meta-item i {
+        color: #16a34a;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #111827;
+        line-height: 1.4;
+        margin-bottom: 12px;
+        transition: color 0.3s ease;
+    }
+
+    .card-title a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .premium-news-card:hover .card-title {
+        color: #16a34a;
+    }
+
+    .card-text {
+        color: #6b7280;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Read More Button */
+    .read-more-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #111827;
+        font-weight: 700;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+        margin-top: auto;
+    }
+
+    .icon-circle {
+        width: 32px;
+        height: 32px;
+        background: #f3f4f6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .read-more-btn:hover {
+        color: #16a34a;
+        gap: 15px;
+    }
+
+    .read-more-btn:hover .icon-circle {
+        background: #16a34a;
+        color: white;
+        transform: rotate(-45deg);
+    }
+
+    /* View All Button */
+    .view-all-btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 14px 32px;
+        background: transparent;
+        color: #16a34a;
+        font-weight: 800;
+        border-radius: 50px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        border: 2px solid #16a34a;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .view-all-btn:hover {
+        color: white;
+        box-shadow: 0 10px 20px rgba(22, 163, 74, 0.2);
+    }
+
+    .btn-bg {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #16a34a;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1;
+    }
+
+    .view-all-btn:hover .btn-bg {
+        left: 0;
+    }
+
+    /* Swiper Customization */
+    .news-swiper .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: #d1d5db;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+
+    .news-swiper .swiper-pagination-bullet-active {
+        width: 24px;
+        background: #16a34a;
+        border-radius: 4px;
+    }
+</style>
+<?php $__env->stopPush(); ?>
+
+<?php $__env->startPush('scripts'); ?>
+<!-- Swiper JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const newsSwiper = new Swiper('.news-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.next-news',
+                prevEl: '.prev-news',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            }
+        });
+    });
+</script>
+<?php $__env->stopPush(); ?>
+
+
+
+<!-- Achievement Section - Ultra Stable Green Layout -->
+<section class="ach-section">
+    <div class="ach-container">
+        <?php
+            $achievements = collect($data['latest_news'] ?? [])
+                ->filter(function($item) {
+                    return strtolower($item->category ?? '') == 'prestasi';
+                })
+                ->take(6);
+        ?>
+
+        <?php if($achievements->count() > 0): ?>
+            <div class="ach-flex-container">
+                <!-- KIRI: GAMBAR DENGAN EFEK TUMPUKAN CSS STABIL -->
+                <div class="ach-image-side">
+                    <div class="ach-stack-container">
+                        <!-- Efek Tumpukan di Belakang (CSS Only) -->
+                        <div class="ach-stack-bg-1"></div>
+                        <div class="ach-stack-bg-2"></div>
+                        
+                        <div class="swiper achievementSwiper">
+                            <div class="swiper-wrapper">
+                                <?php $__currentLoopData = $achievements; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="swiper-slide">
+                                        <div class="ach-image-box">
+                                            <?php if($item->image): ?>
+                                                <img src="<?php echo e(asset($item->image)); ?>" alt="<?php echo e($item->title); ?>" class="ach-img">
+                                            <?php else: ?>
+                                                <div class="ach-placeholder">
+                                                    <i class="fas fa-trophy"></i>
+                                                </div>
+                                            <?php endif; ?>
+                                            <div class="ach-label">Dokumentasi</div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
-                            <div class="event-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <?php echo e($event['location']); ?>
-
+                            
+                            <!-- Navigasi Bulat -->
+                            <div class="ach-nav-wrapper">
+                                <button class="ach-nav-btn ach-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="ach-nav-btn ach-next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <h3 class="event-title"><?php echo e($event['title']); ?></h3>
-                    <a href="#" class="btn btn-primary">
-                        Detail Acara <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            <?php else: ?>
-                <!-- Default events if no data -->
-                <div class="event-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="event-date">
-                        <div class="date-box">
-                            <div class="day">25</div>
-                            <div class="month">Jan</div>
-                        </div>
-                        <div class="event-meta">
-                            <div class="event-time">
-                                <i class="fas fa-clock"></i>
-                                08:00 - 12:00
-                            </div>
-                            <div class="event-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Aula Sekolah
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="event-title">Seminar Teknologi Pendidikan</h3>
-                    <a href="#" class="btn btn-primary">
-                        Detail Acara <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
 
-                <div class="event-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="event-date">
-                        <div class="date-box">
-                            <div class="day">30</div>
-                            <div class="month">Jan</div>
-                        </div>
-                        <div class="event-meta">
-                            <div class="event-time">
-                                <i class="fas fa-clock"></i>
-                                07:30 - 15:00
-                            </div>
-                            <div class="event-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Lapangan Sekolah
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="event-title">Penerimaan Siswa Baru 2024</h3>
-                    <a href="#" class="btn btn-primary">
-                        Detail Acara <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+                <!-- KANAN: KONTEN TEKS -->
+                <div class="ach-text-side">
+                    <div class="swiper achievementTextSwiper">
+                        <div class="swiper-wrapper">
+                            <?php $__currentLoopData = $achievements; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <div class="swiper-slide">
+                                    <div class="ach-info">
+                                        <span class="ach-badge">PRESTASI TERBARU</span>
+                                        <h2 class="ach-title"><?php echo e($item->title); ?></h2>
+                                        <p class="ach-desc">
+                                            <?php echo e(Str::limit(strip_tags($item->content), 180, '...')); ?>
 
-                <div class="event-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="event-date">
-                        <div class="date-box">
-                            <div class="day">05</div>
-                            <div class="month">Feb</div>
-                        </div>
-                        <div class="event-meta">
-                            <div class="event-time">
-                                <i class="fas fa-clock"></i>
-                                09:00 - 16:00
-                            </div>
-                            <div class="event-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Lab Komputer
-                            </div>
+                                        </p>
+                                       <a href="<?php echo e(route('information.news', ['category' => 'Prestasi'])); ?>" class="ach-btn">
+                                                Lihat Daftar Prestasi Lainnya
+                                            </a>
+
+                                    </div>
+                                </div>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                     </div>
-                    <h3 class="event-title">Workshop Coding untuk Siswa</h3>
-                    <a href="#" class="btn btn-primary">
-                        Detail Acara <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
-            <?php endif; ?>
-        </div>
+            </div>
+        <?php else: ?>
+            <div class="ach-empty">
+                <i class="fas fa-award"></i>
+                <p>Belum ada data prestasi terbaru.</p>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
+
+<?php $__env->startPush('styles'); ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+    /* BASE SETUP */
+    .ach-section {
+        padding: 80px 0;
+        background: #ffffff;
+        overflow: hidden;
+    }
+
+    .ach-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .ach-flex-container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    /* ============================================
+       LEFT SIDE: STABLE STACK EFFECT
+       ============================================ */
+    .ach-image-side {
+        flex: 1;
+        min-width: 300px;
+        position: relative;
+    }
+
+    .ach-stack-container {
+        position: relative;
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    /* CSS Stacked Backgrounds */
+    .ach-stack-bg-1, .ach-stack-bg-2 {
+        position: absolute;
+        top: 0;
+        right: -15px;
+        width: 100%;
+        height: 100%;
+        background: #e2e8f0;
+        border-radius: 12px;
+        z-index: 1;
+    }
+
+    .ach-stack-bg-1 {
+        transform: translateX(10px) scale(0.98);
+        opacity: 0.8;
+    }
+
+    .ach-stack-bg-2 {
+        transform: translateX(20px) scale(0.95);
+        opacity: 0.5;
+    }
+
+    .achievementSwiper {
+        position: relative;
+        z-index: 5;
+        border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        background: #fff;
+    }
+
+    .ach-image-box {
+        position: relative;
+        aspect-ratio: 4/3;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .ach-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .ach-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #16a34a, #22c55e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 4rem;
+    }
+
+    .ach-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg, #16a34a, #22c55e);
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    /* NAVIGASI BULAT */
+    .ach-nav-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .ach-nav-btn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: #16a34a;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        pointer-events: auto;
+        transition: all 0.3s ease;
+    }
+
+    .ach-nav-btn:hover {
+        background: #15803d;
+        transform: scale(1.1);
+    }
+
+    /* ============================================
+       RIGHT SIDE: TEXT CONTENT
+       ============================================ */
+    .ach-text-side {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .ach-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ach-badge {
+        display: inline-block;
+        background: #f0fdf4;
+        color: #16a34a;
+        padding: 6px 15px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        width: fit-content;
+    }
+
+    .ach-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #1e293b;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .ach-desc {
+        font-size: 1.1rem;
+        color: #64748b;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .ach-btn {
+        display: inline-block;
+        background: #16a34a;
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        width: fit-content;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(22, 163, 74, 0.2);
+    }
+
+    .ach-btn:hover {
+        background: #15803d;
+        transform: translateY(-2px);
+        color: #fff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .ach-flex-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .ach-badge, .ach-btn {
+            margin: 0 auto;
+        }
+        .ach-title {
+            font-size: 2rem;
+        }
+        .ach-stack-container {
+            max-width: 100%;
+            padding-right: 20px;
+        }
+    }
+</style>
+<?php $__env->stopPush(); ?>
+
+<?php $__env->startPush('scripts'); ?>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const textSwiper = new Swiper('.achievementTextSwiper', {
+            slidesPerView: 1,
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            allowTouchMove: false,
+        });
+
+        const imageSwiper = new Swiper('.achievementSwiper', {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: '.ach-next',
+                prevEl: '.ach-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            on: {
+                slideChange: function () {
+                    textSwiper.slideTo(this.realIndex);
+                }
+            }
+        });
+    });
+</script>
+<?php $__env->stopPush(); ?>
+
+
+
+
+
 
 
 
@@ -1641,7 +2926,7 @@ body, html {
             <div class="ppdb-content-v3">
                 <div class="ppdb-header-v3">
                     <span class="ppdb-badge-v3">
-                        <?php echo e(optional($ppdb)->section_badge ?? 'PPDB T.A.'); ?>
+                        <?php echo e(optional($ppdb)->section_badge ?? 'SPMB T.A.'); ?>
 
                     </span>
 
@@ -1918,7 +3203,6 @@ body, html {
 }
 
 </style>
-
 <!-- JavaScript (TIDAK ADA PERUBAHAN) -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -1939,81 +3223,165 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+<!-- Teacher Section -->
+<section class="teacher-section-container py-12 lg:py-20 bg-gray-50 relative overflow-hidden">
+    <!-- Decorative Background -->
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div class="absolute top-[-5%] left-[-5%] w-[300px] h-[300px] bg-green-100/40 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-[-5%] right-[-5%] w-[250px] h-[250px] bg-emerald-100/30 rounded-full blur-[80px]"></div>
+    </div>
 
-
-<section class="teacher-section-container py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4">
-
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
         <!-- Header Section -->
-        <div class="text-center mb-12 lg:mb-16">
-            <span class="section-badge">Guru Kami</span>
-            <h2 class="main-title mt-4">Mereka yang Menginspirasi</h2>
+        <div class="text-center mb-10 lg:mb-12" data-aos="fade-up">
+            <div class="flex flex-col items-center justify-center mb-3">
+                <span class="text-green-600 font-bold uppercase tracking-widest text-xs mb-2">Pendidik Profesional</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 leading-tight">
+                    Guru <span class="text-green-600">Kami</span>
+                </h2>
+                <div class="w-12 h-1 bg-green-600 mt-3 rounded-full"></div>
+            </div>
+            <p class="text-gray-500 text-sm sm:text-base leading-relaxed max-w-xl mx-auto px-2">
+                Bertemu dengan para pendidik berdedikasi yang membimbing siswa mencapai prestasi terbaik mereka.
+            </p>
         </div>
 
         <?php if(isset($teachers) && $teachers->count() > 0): ?>
-            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            <div class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
 
-              <!-- Panel Detail Guru (Kiri) -->
-<div id="guru-detail" class="w-full lg:w-2/5 lg:sticky top-24 self-start">
-    <div class="featured-teacher-card p-6 text-center">
-        <div class="featured-teacher-image aspect-square max-w-xs mx-auto">
-            <img
-                src="<?php echo e($teachers->first()->photo ? asset('public/'.$teachers->first()->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($teachers->first()->name) . '&background=random'); ?>"
-                alt="<?php echo e($teachers->first()->name); ?>"
-                id="featured-image"
-                loading="lazy">
-        </div>
-        <h3 class="featured-teacher-name mt-6" id="featured-name"><?php echo e($teachers->first()->name); ?></h3>
-        <p class="featured-teacher-position" id="featured-position"><?php echo e($teachers->first()->position); ?></p>
-    </div>
-</div>
+                <!-- Panel Detail Guru (Kiri - Card Lebih Kecil) -->
+                <div id="guru-detail" class="w-full lg:w-[35%] lg:sticky top-24 self-start transition-all duration-500 ease-in-out" data-aos="fade-right">
+                    <div class="featured-teacher-card-premium overflow-hidden bg-white rounded-2xl shadow-lg shadow-green-900/5 border border-gray-100">
+                        <div class="relative">
+                            <!-- Image with Gradient Overlay - Adjusted Aspect Ratio -->
+                            <div class="featured-image-wrapper aspect-[4/5] overflow-hidden">
+                                <img
+                                    src="<?php echo e($teachers->first()->photo ? asset('storage/'.$teachers->first()->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($teachers->first()->name) . '&background=random'); ?>"
+                                    alt="<?php echo e($teachers->first()->name); ?>"
+                                    id="featured-image"
+                                    class="w-full h-full object-cover transition-transform duration-700"
+                                    loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                            </div>
 
-<!-- Grid Guru (Kanan) -->
-<div class="w-full lg:w-3/5">
-    <div class="teacher-grid">
-        <?php $__currentLoopData = $teachers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $teacher): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="teacher-card"
-                 onclick="showTeacherDetails(this)"
-                 data-nama="<?php echo e($teacher->name); ?>"
-                 data-jabatan="<?php echo e($teacher->position); ?>"
-                 data-foto="<?php echo e($teacher->photo ? asset('public/'.$teacher->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($teacher->name) . '&background=random'); ?>">
+                            <!-- Info Overlay - Smaller Padding & Text -->
+                            <div class="absolute bottom-0 left-0 w-full p-5 lg:p-6">
+                                <h3 class="text-xl sm:text-2xl font-black text-white mb-1 line-clamp-2" id="featured-name">
+                                    <?php echo e($teachers->first()->name); ?>
 
-                <img
-                    src="<?php echo e($teacher->photo ? asset('public/'.$teacher->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($teacher->name) . '&background=random'); ?>"
-                    alt="<?php echo e($teacher->name); ?>"
-                    loading="lazy">
+                                </h3>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-4 h-[2px] bg-green-500"></span>
+                                    <p class="text-green-400 font-bold text-xs sm:text-sm uppercase tracking-wide" id="featured-position">
+                                        <?php echo e($teachers->first()->position); ?>
 
-                <div class="teacher-card-overlay">
-                    <h4 class="teacher-card-name"><?php echo e($teacher->name); ?></h4>
-                    <p class="teacher-card-position"><?php echo e($teacher->position); ?></p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Info - Reduced Padding -->
+                        <div class="p-4 lg:p-5 bg-white">
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-4"></div>
+                                <span class="text-[10px] sm:text-xs text-gray-400 italic">SMP Negeri 12 Gresik</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </div>
-</div>
 
+                <!-- Grid Guru (Kanan - Card Kecil) -->
+                <div class="w-full lg:w-[65%]" data-aos="fade-left">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                        <?php $__currentLoopData = $teachers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $teacher): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <div class="teacher-card-mini group cursor-pointer"
+                                 onclick="showTeacherDetails(this)"
+                                 data-nama="<?php echo e($teacher->name); ?>"
+                                 data-jabatan="<?php echo e($teacher->position); ?>"
+                                 data-foto="<?php echo e($teacher->photo ? asset('storage/'.$teacher->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($teacher->name) . '&background=random'); ?>">
+
+                                <div class="relative aspect-square rounded-xl overflow-hidden border-2 border-gray-200 group-[.active]:border-green-500 transition-all duration-300 shadow-sm hover:shadow-md group-[.active]:shadow-md group-[.active]:shadow-green-500/20">
+                                    <img
+                                        src="<?php echo e($teacher->photo ? asset('storage/'.$teacher->photo) : 'https://ui-avatars.com/api/?name=' . urlencode($teacher->name) . '&background=random'); ?>"
+                                        alt="<?php echo e($teacher->name); ?>"
+                                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-[.active]:scale-110"
+                                        loading="lazy">
+
+                                    <!-- Mini Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-green-900/70 to-transparent opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-2">
+                                        <h4 class="text-white font-bold text-[10px] leading-tight truncate"><?php echo e($teacher->name); ?></h4>
+                                        <p class="text-green-300 text-[8px] truncate"><?php echo e($teacher->position); ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </div>
+
+                    <!-- View All Button - More Compact -->
+                    <div class="mt-8 lg:mt-10 text-center lg:text-left">
+                        <a href="<?php echo e(route('teachers')); ?>" class="inline-flex items-center justify-center lg:justify-start gap-2 w-full sm:w-auto px-5 py-3 bg-white border-2 border-green-600 text-green-600 font-bold text-sm rounded-xl hover:bg-green-600 hover:text-white transition-all duration-300 shadow-md group">
+                            <i class="fas fa-chalkboard-teacher group-hover:scale-110 transition-transform"></i>
+                            <span>Lihat Semua Staf & Guru</span>
+                        </a>
+                    </div>
+                </div>
 
             </div>
         <?php else: ?>
-            <p class="text-center text-gray-500">Data guru tidak ditemukan.</p>
+            <div class="py-12 text-center bg-white rounded-2xl border-2 border-dashed border-gray-200">
+                <i class="fas fa-user-tie text-4xl text-gray-200 mb-3"></i>
+                <p class="text-gray-500 font-medium text-xs sm:text-sm">Data guru belum tersedia saat ini.</p>
+            </div>
         <?php endif; ?>
     </div>
-            <div class="text-center mt-6" data-aos="fade-up">
-            <a href="<?php echo e(route('teachers')); ?>" class="btn btn-primary">
-                <i class="fas fa-chalkboard-teacher"></i>
-                Lihat Semua Staf & Guru
-            </a>
-        </div>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const firstCard = document.querySelector('.teacher-card');
-        if (firstCard) {
-            firstCard.classList.add('active');
-        }
-    });
+<?php $__env->startPush('styles'); ?>
+<style>
+    /* PREMIUM TEACHER SECTION STYLES */
 
+    .featured-teacher-card-premium {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .featured-image-wrapper img {
+        transform-origin: center;
+    }
+
+    .teacher-card-mini.active .relative {
+        transform: scale(0.96);
+        box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+        .teacher-section-container {
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .lg\:sticky {
+            top: 80px;
+        }
+    }
+
+    /* Animation for the detail change */
+    .detail-changing {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    /* Smooth transitions for teacher cards */
+    .teacher-card-mini {
+        transition: all 0.3s ease-in-out;
+    }
+</style>
+<?php $__env->stopPush(); ?>
+
+<?php $__env->startPush('scripts'); ?>
+<script>
     function showTeacherDetails(cardElement) {
         const nama = cardElement.dataset.nama;
         const jabatan = cardElement.dataset.jabatan;
@@ -2024,8 +3392,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const featuredName = document.getElementById('featured-name');
         const featuredPosition = document.getElementById('featured-position');
 
-        detailPanel.style.opacity = '0.5';
-        detailPanel.style.transform = 'scale(0.98)';
+        // Add transition effect
+        detailPanel.classList.add('opacity-50', 'scale-98');
 
         setTimeout(() => {
             featuredImage.src = foto;
@@ -2033,86 +3401,26 @@ document.addEventListener("DOMContentLoaded", () => {
             featuredName.textContent = nama;
             featuredPosition.textContent = jabatan;
 
-            detailPanel.style.opacity = '1';
-            detailPanel.style.transform = 'scale(1)';
-        }, 200);
+            detailPanel.classList.remove('opacity-50', 'scale-98');
+        }, 300);
 
-        document.querySelectorAll('.teacher-card').forEach(card => {
+        // Update active state in mini cards
+        document.querySelectorAll('.teacher-card-mini').forEach(card => {
             card.classList.remove('active');
         });
         cardElement.classList.add('active');
     }
 </script>
+<?php $__env->stopPush(); ?>
+
 
 </body>
 </html>
 
 
-<!-- Facilities Section -->
-<section class="facilities">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Fasilitas Unggulan</h2>
-            <p>Fasilitas modern dan lengkap untuk mendukung proses pembelajaran yang optimal</p>
-        </div>
-
-        <div class="facilities-grid">
-            <?php if(isset($data['facilities']) && count($data['facilities']) > 0): ?>
-                <?php $__currentLoopData = $data['facilities']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $facility): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="facility-card" data-aos="fade-up" data-aos-delay="<?php echo e(($index + 1) * 100); ?>">
-                    <div class="facility-icon">
-                        <i class="fas fa-<?php echo e($facility['icon']); ?>"></i>
-                    </div>
-                    <h3 class="facility-name"><?php echo e($facility['name']); ?></h3>
-                    <p class="facility-description"><?php echo e($facility['description']); ?></p>
-                </div>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            <?php else: ?>
-                <!-- Default facilities if no data -->
-                <div class="facility-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="facility-icon">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3 class="facility-name">Laboratorium Komputer</h3>
-                    <p class="facility-description">Lab komputer modern dengan perangkat terbaru untuk pembelajaran teknologi informasi.</p>
-                </div>
-
-                <div class="facility-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="facility-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3 class="facility-name">Laboratorium IPA</h3>
-                    <p class="facility-description">Fasilitas laboratorium lengkap untuk praktikum fisika, kimia, dan biologi.</p>
-                </div>
-
-                
-                <div class="facility-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="facility-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <h3 class="facility-name">Fasilitas Olahraga</h3>
-                    <p class="facility-description">Lapangan olahraga lengkap dan gymnasium untuk berbagai aktivitas fisik.</p>
-                </div>
 
 
-                <div class="facility-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="facility-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3 class="facility-name">Kantin Sehat</h3>
-                    <p class="facility-description">Kantin dengan menu makanan sehat dan bergizi untuk mendukung kesehatan siswa.</p>
-                </div>
-            <?php endif; ?>
-        </div>
 
-        <div class="text-center mt-6" data-aos="fade-up">
-            <a href="<?php echo e(route('facilities')); ?>" class="btn btn-primary">
-                <i class="fas fa-building"></i>
-                Lihat Semua Fasilitas
-            </a>
-        </div>
-    </div>
-</section>
 
 <!-- CTA Section -->
 <section class="cta">
@@ -2127,7 +3435,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <i class="fas fa-phone"></i>
                     Hubungi Kami
                 </a>
-                <a href="<?php echo e(route('about')); ?>" class="btn btn-outline">
+                <a href="<?php echo e(route('about.organization')); ?>" class="btn btn-outline">
                     <i class="fas fa-info-circle"></i>
                     Pelajari Lebih Lanjut
                 </a>

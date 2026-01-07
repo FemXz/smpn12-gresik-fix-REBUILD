@@ -7,13 +7,18 @@ use App\Models\News;
 use App\Models\Teacher;
 use App\Models\Stat;
 use App\Models\PpdbSetting;
-use App\Models\WelcomeHead; // tambah ini
+use App\Models\WelcomeHead;
+use App\Models\Facility;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        // Ambil berita terbaru (3 terakhir)
+        /*
+        |--------------------------------------------------------------------------
+        | 1. BERITA TERBARU
+        |--------------------------------------------------------------------------
+        */
         $latestNews = News::where('published_at', '<=', now())
             ->orderBy('published_at', 'desc')
             ->take(3)
@@ -31,10 +36,29 @@ class HomeController extends Controller
             ]);
         }
 
-        // Ambil semua guru
+        /*
+        |--------------------------------------------------------------------------
+        | 2. PRESTASI TERBARU (INI YANG KEMARIN ERROR)
+        |--------------------------------------------------------------------------
+        */
+        $achievements = News::where('category', 'Prestasi')
+            ->where('published_at', '<=', now())
+            ->orderBy('published_at', 'desc')
+            ->take(3)
+            ->get();
+
+        /*
+        |--------------------------------------------------------------------------
+        | 3. DATA GURU
+        |--------------------------------------------------------------------------
+        */
         $teachers = Teacher::orderBy('name')->get();
 
-        // Ambil data statistik
+        /*
+        |--------------------------------------------------------------------------
+        | 4. STATISTIK SEKOLAH
+        |--------------------------------------------------------------------------
+        */
         $stat = Stat::first();
         if (!$stat) {
             $stat = (object) [
@@ -45,24 +69,44 @@ class HomeController extends Controller
             ];
         }
 
-        // Ambil PPDB setting
+        /*
+        |--------------------------------------------------------------------------
+        | 5. PPDB SETTING
+        |--------------------------------------------------------------------------
+        */
         $ppdb = PpdbSetting::first();
 
-        // Ambil isi sambutan kepala sekolah (hanya 1 row di desain ini)
+        /*
+        |--------------------------------------------------------------------------
+        | 6. SAMBUTAN KEPALA SEKOLAH
+        |--------------------------------------------------------------------------
+        */
         $hero = WelcomeHead::first();
-
-        // fallback default kalau belum ada data
         if (!$hero) {
             $hero = (object) [
                 'photo' => null,
                 'title' => 'SMP Negeri 12 Gresik',
                 'subtitle' => 'Sambutan Kepala Sekolah',
-                'description' => "Assalamu'alaikum Warahmatullahi Wabarakatuh. Dengan penuh kebanggaan, saya menyambut Anda di sekolah kami. Kami berkomitmen untuk memberikan pendidikan berkualitas yang mengembangkan akademik, karakter, dan kepribadian setiap siswa.",
+                'description' => "Assalamu'alaikum Warahmatullahi Wabarakatuh...",
                 'name' => 'Drs. Nama Kepala Sekolah',
                 'position' => 'Kepala Sekolah',
             ];
         }
 
+        /*
+        |--------------------------------------------------------------------------
+        | 7. FASILITAS
+        |--------------------------------------------------------------------------
+        */
+        $facilities = Facility::where('is_active', true)
+            ->orderBy('id', 'asc')
+            ->get();
+
+        /*
+        |--------------------------------------------------------------------------
+        | 8. DATA UTAMA UNTUK VIEW
+        |--------------------------------------------------------------------------
+        */
         $data = [
             'hero' => [
                 'title' => $hero->title,
@@ -76,16 +120,23 @@ class HomeController extends Controller
                 'achievements' => $stat->achievements,
             ],
             'latest_news' => $latestNews,
-            'upcoming_events' => [
-                // ... tetap seperti sebelumnya
-            ],
-            'facilities' => [
-                // ... tetap seperti sebelumnya
-            ],
+            'upcoming_events' => [],
+            'facilities' => $facilities,
         ];
 
-        // Kirim hero juga sebagai variable terpisah supaya blade partial gampang akses photo/name/position
-        return view('home', compact('data', 'teachers', 'stat', 'ppdb', 'hero'));
+        /*
+        |--------------------------------------------------------------------------
+        | 9. RETURN VIEW (SEMUA VARIABLE DIKIRIM)
+        |--------------------------------------------------------------------------
+        */
+        return view('home', compact(
+            'data',
+            'teachers',
+            'stat',
+            'ppdb',
+            'hero',
+            'achievements' // 🔥 INI YANG TADI KAMU LUPA
+        ));
     }
 
     public function upcomingEvents()

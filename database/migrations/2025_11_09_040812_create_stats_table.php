@@ -6,20 +6,26 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::table('stats', function (Blueprint $table) {
+        Schema::create('stats', function (Blueprint $table) {
+            $table->id();
             $table->integer('students')->default(0);
             $table->integer('teachers')->default(0);
             $table->integer('staff')->default(0);
             $table->integer('achievements')->default(0);
+            $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::table('stats', function (Blueprint $table) {
-            $table->dropColumn(['students', 'teachers', 'staff', 'achievements']);
-        });
+        Schema::dropIfExists('stats');
     }
 };

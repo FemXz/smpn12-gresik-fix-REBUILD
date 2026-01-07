@@ -26,7 +26,7 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f4f7f6; /* Changed background for content visibility */
+            background: #f4f7f6;
         }
 
         .container {
@@ -37,7 +37,7 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95 ) 0%, rgba(118, 75, 162, 0.95) 100%);
+            background: linear-gradient(135deg, #059263ff 0%, #2c7922ff 100%);
             padding: 80px 0;
             text-align: center;
             position: relative;
@@ -82,11 +82,11 @@
         }
 
         .principal-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #059263ff 0%, #2c7922ff 100%);
             border-radius: 25px;
             padding: 40px;
             color: white;
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 40px rgba(5, 146, 99, 0.3);
             max-width: 450px;
             margin: 0 auto;
             transition: all 0.3s ease;
@@ -94,7 +94,7 @@
 
         .principal-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 30px 60px rgba(5, 146, 99, 0.4);
         }
 
         .principal-avatar {
@@ -148,7 +148,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #059263ff, #2c7922ff);
             border-radius: 2px;
         }
 
@@ -235,12 +235,10 @@
         .staff-header i { font-size: 1.4rem; }
         .staff-header h3 { font-size: 1.2rem; }
 
-        .staff-card:nth-child(1) .staff-header { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .staff-card:nth-child(1) .staff-header { background: linear-gradient(135deg, #059263ff, #2c7922ff); }
         .staff-card:nth-child(2) .staff-header { background: linear-gradient(135deg, #28a745, #20c997); }
         .staff-card:nth-child(3) .staff-header { background: linear-gradient(135deg, #17a2b8, #20c997); }
         .staff-card:nth-child(4) .staff-header { background: linear-gradient(135deg, #ffc107, #fd7e14); }
-        .staff-card:nth-child(5) .staff-header { background: linear-gradient(135deg, #6c757d, #495057); }
-        .staff-card:nth-child(6) .staff-header { background: linear-gradient(135deg, #343a40, #495057); }
 
         .staff-body { padding: 25px; }
         .staff-list { list-style: none; }
@@ -254,10 +252,10 @@
         }
         .staff-list li:last-child { border-bottom: none; }
         .staff-list li::before {
-            content: '\f00c'; /* Font Awesome check icon */
+            content: '\f00c';
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
-            color: #667eea;
+            color: #059263ff;
         }
         .staff-role { font-weight: 600; color: #2d3748; }
         .staff-name { color: #4a5568; }
@@ -295,7 +293,7 @@
         .committee-role {
             font-size: 1rem;
             font-weight: 600;
-            color: #667eea;
+            color: #059263ff;
             margin-bottom: 8px;
         }
         .committee-name {
@@ -340,7 +338,7 @@
             <div class="hero-content">
                 <div class="hero-icon"><i class="fas fa-sitemap"></i></div>
                 <h1 class="hero-title">Struktur Organisasi</h1>
-                <p class="hero-subtitle">Susunan kepemimpinan dan manajemen sekolah</p>
+                <p class="hero-subtitle">Susunan kepemimpinan dan manajemen UPT SMP Negeri 12 Gresik</p>
             </div>
         </div>
     </section>
@@ -352,9 +350,9 @@
             <div class="principal-section fade-in">
                 <div class="principal-card">
                     <div class="principal-avatar"><i class="fas fa-user-tie"></i></div>
-                    <h2 class="principal-name">Drs. Ahmad Suryanto, M.Pd</h2>
+                    <h2 class="principal-name">Wahyudi, S.Pd.</h2>
                     <p class="principal-title">Kepala Sekolah</p>
-                    <p class="principal-nip">NIP: 196505121990031007</p>
+                    <p class="principal-nip">NIP: 196812051995011001</p>
                 </div>
             </div>
 
@@ -362,32 +360,22 @@
             <div class="vice-principals fade-in">
                 <h2 class="section-title">Wakil Kepala Sekolah</h2>
                 <div class="vice-grid">
-                    <div class="vice-card"><div class="vice-avatar"><i class="fas fa-user-graduate"></i></div><h3 class="vice-name">Dra. Siti Aminah</h3><p class="vice-position">Bidang Kurikulum</p></div>
-                    <div class="vice-card"><div class="vice-avatar"><i class="fas fa-users"></i></div><h3 class="vice-name">Drs. Bambang Wijaya</h3><p class="vice-position">Bidang Kesiswaan</p></div>
-                    <div class="vice-card"><div class="vice-avatar"><i class="fas fa-building"></i></div><h3 class="vice-name">Dra. Endang Sulistyowati</h3><p class="vice-position">Bidang Sarana Prasarana</p></div>
-                    <div class="vice-card"><div class="vice-avatar"><i class="fas fa-handshake"></i></div><h3 class="vice-name">Drs. Agus Priyanto</h3><p class="vice-position">Bidang Humas</p></div>
+                    <div class="vice-card"><div class="vice-avatar"><i class="fas fa-user-graduate"></i></div><h3 class="vice-name">Ani Amimah, S.Pd.</h3><p class="vice-position">Wakil Kepala Sekolah</p></div>
+                    <div class="vice-card"><div class="vice-avatar"><i class="fas fa-users"></i></div><h3 class="vice-name">Drs. Rohimin, M.M.</h3><p class="vice-position">Jajaran Pimpinan</p></div>
                 </div>
             </div>
 
             <!-- Koordinator dan Staff -->
             <div class="staff-section fade-in">
-                <h2 class="section-title">Koordinator dan Staff</h2>
+                <h2 class="section-title">Manajemen Sekolah</h2>
                 <div class="staff-grid">
                     <div class="staff-card">
-                        <div class="staff-header"><i class="fas fa-clipboard-list"></i><h3>Tata Usaha</h3></div>
-                        <div class="staff-body"><ul class="staff-list"><li><span class="staff-role">Kepala TU:</span> <span class="staff-name">Dra. Rina Kusumawati</span></li><li><span class="staff-role">Staff:</span> <span class="staff-name">Siti Nurjanah, S.Pd</span></li></ul></div>
+                        <div class="staff-header"><i class="fas fa-clipboard-list"></i><h3>Administrasi</h3></div>
+                        <div class="staff-body"><ul class="staff-list"><li><span class="staff-role">Pengurus Barang:</span> <span class="staff-name">Staf Administrasi</span></li></ul></div>
                     </div>
                     <div class="staff-card">
-                        <div class="staff-header"><i class="fas fa-book"></i><h3>Perpustakaan</h3></div>
-                        <div class="staff-body"><ul class="staff-list"><li><span class="staff-role">Kepala:</span> <span class="staff-name">Dra. Yuni Astuti</span></li><li><span class="staff-role">Staff:</span> <span class="staff-name">Eko Prasetyo, S.Pd</span></li></ul></div>
-                    </div>
-                    <div class="staff-card">
-                        <div class="staff-header"><i class="fas fa-laptop"></i><h3>Laboratorium</h3></div>
-                        <div class="staff-body"><ul class="staff-list"><li><span class="staff-role">Lab. IPA:</span> <span class="staff-name">Drs. Hadi Susanto</span></li><li><span class="staff-role">Lab. Komputer:</span> <span class="staff-name">Andi Wijaya, S.Kom</span></li></ul></div>
-                    </div>
-                    <div class="staff-card">
-                        <div class="staff-header"><i class="fas fa-user-nurse"></i><h3>UKS & Konseling</h3></div>
-                        <div class="staff-body"><ul class="staff-list"><li><span class="staff-role">Guru BK:</span> <span class="staff-name">Dra. Lestari Wulandari</span></li><li><span class="staff-role">Petugas UKS:</span> <span class="staff-name">Ns. Sari Indrawati</span></li></ul></div>
+                        <div class="staff-header"><i class="fas fa-leaf"></i><h3>Adiwiyata</h3></div>
+                        <div class="staff-body"><ul class="staff-list"><li><span class="staff-role">Koordinator:</span> <span class="staff-name">Kader Adiwiyata</span></li></ul></div>
                     </div>
                 </div>
             </div>
@@ -396,10 +384,7 @@
             <div class="committee-section fade-in">
                 <h2 class="committee-title"><i class="fas fa-users-cog"></i> Komite Sekolah</h2>
                 <div class="committee-grid">
-                    <div class="committee-member"><div class="committee-role">Ketua</div><div class="committee-name">H. Sutrisno, S.E</div></div>
-                    <div class="committee-member"><div class="committee-role">Wakil Ketua</div><div class="committee-name">Dra. Indira Sari</div></div>
-                    <div class="committee-member"><div class="committee-role">Sekretaris</div><div class="committee-name">Ahmad Yusuf, S.Pd</div></div>
-                    <div class="committee-member"><div class="committee-role">Bendahara</div><div class="committee-name">Hj. Fatimah, S.E</div></div>
+                    <div class="committee-member"><div class="committee-role">Ketua Komite</div><div class="committee-name">Pengurus Komite Sekolah</div></div>
                 </div>
             </div>
         </div>

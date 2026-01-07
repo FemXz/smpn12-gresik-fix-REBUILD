@@ -3,20 +3,22 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class IsAdmin
 {
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
-        // Cek login dulu
-        if (!Auth::check()) {
-            return redirect()->route('login');
+        if (!auth()->check()) {
+            return redirect('/login');
         }
 
-        // Cek role
-        if (Auth::user()->role !== 'admin') {
-            abort(403, 'Akses ditolak! Ini area admin.');
+        if (!in_array(auth()->user()->role, ['admin', 'superadmin'])) {
+            abort(403, 'ADMIN ONLY');
+        }
+
+        if (auth()->user()->status !== 'active') {
+            abort(403, 'ACCOUNT NOT ACTIVE');
         }
 
         return $next($request);

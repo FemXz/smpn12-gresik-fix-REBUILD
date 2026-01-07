@@ -12,8 +12,13 @@
     <div class="card shadow-sm">
         <div class="card-body">
 
-           <form action="{{ route('admin.welcome.update', $welcome->id) }}" method="POST">
+          <form action="{{ route('admin.welcome.update', $welcome->id) }}" 
+      method="POST" 
+      enctype="multipart/form-data"> <!-- penting untuk file -->
+
     @csrf
+    @method('PUT') <!-- penting! memberi tahu Laravel ini update -->
+
 
 
                 <div class="row">

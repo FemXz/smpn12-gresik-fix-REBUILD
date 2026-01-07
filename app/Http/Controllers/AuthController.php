@@ -27,16 +27,22 @@ class AuthController extends Controller
             // ✅ Cek status dulu
             if ($user->status !== 'active') {
                 Auth::logout();
-                return redirect()->route('login')->with('error', 'Akun kamu masih pending, tunggu admin approve.');
+                return redirect()->route('login')
+                    ->with('error', 'Akun kamu masih pending, tunggu admin approve.');
             }
 
             $request->session()->regenerate();
-            
-            // ✅ Redirect sesuai role
-            if ($user->role === 'admin') {
-                return redirect()->intended('/admin');
+
+            // ✅ Redirect otomatis berdasarkan role
+            switch ($user->role) {
+                case 'superadmin':
+                case 'admin':
+                    return redirect()->route('admin.dashboard');
+                case 'head':
+                    return redirect()->route('admin.dashboard'); // bisa diubah kalau ada dashboard khusus
+                default:
+                    return redirect()->route('home');
             }
-            return redirect()->intended('/dashboard');
         }
 
         return back()->with('error', 'Email atau password salah.');
@@ -60,10 +66,11 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'status' => 'pending', 
-            'role' => 'user',      
+            'role' => 'user', // default user
         ]);
 
-        return redirect()->route('login')->with('success', 'Pendaftaran berhasil! Tunggu admin approve akun kamu.');
+        return redirect()->route('login')
+            ->with('success', 'Pendaftaran berhasil! Tunggu admin approve akun kamu.');
     }
 
     public function logout(Request $request)
